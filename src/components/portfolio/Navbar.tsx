@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sparkles } from 'lucide-react';
 import logo from '@/assets/logo.png';
+import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -99,33 +100,40 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <motion.a
-          href="#contact"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="hidden md:flex items-center gap-2 px-6 py-2.5 bg-gradient-primary text-primary-foreground rounded-full font-semibold text-sm relative overflow-hidden group"
-          style={{
-            boxShadow: '0 0 20px hsl(262 83% 58% / 0.4)'
-          }}
-        >
-          <motion.span
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-            initial={{ x: '-100%' }}
-            whileHover={{ x: '100%' }}
-            transition={{ duration: 0.5 }}
-          />
-          <Sparkles className="w-4 h-4" />
-          <span className="relative z-10">Hire Me</span>
-        </motion.a>
+        {/* Right side: Theme Toggle + CTA */}
+        <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
+          
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-2 px-6 py-2.5 bg-gradient-primary text-primary-foreground rounded-full font-semibold text-sm relative overflow-hidden group"
+            style={{
+              boxShadow: '0 0 20px hsl(262 83% 58% / 0.4)'
+            }}
+          >
+            <motion.span
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              initial={{ x: '-100%' }}
+              whileHover={{ x: '100%' }}
+              transition={{ duration: 0.5 }}
+            />
+            <Sparkles className="w-4 h-4" />
+            <span className="relative z-10">Hire Me</span>
+          </motion.a>
+        </div>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden text-foreground p-2 glass rounded-xl"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="lg:hidden flex items-center gap-3">
+          <ThemeToggle />
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-foreground p-2 glass rounded-xl"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -135,7 +143,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass-strong mt-4 mx-4 rounded-2xl overflow-hidden border border-white/10"
+            className="lg:hidden glass-strong mt-4 mx-4 rounded-2xl overflow-hidden border border-border/30"
           >
             <div className="p-6 flex flex-col gap-2">
               {navLinks.map((link) => (
@@ -147,7 +155,7 @@ const Navbar = () => {
                   className={`py-3 px-4 rounded-xl transition-all ${
                     activeSection === link.href.replace('#', '')
                       ? 'bg-primary/20 text-primary'
-                      : 'text-foreground hover:bg-white/5'
+                      : 'text-foreground hover:bg-secondary/50'
                   }`}
                 >
                   {link.name}
