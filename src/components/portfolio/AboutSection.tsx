@@ -1,33 +1,39 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Code2, Palette, Video, Zap, Heart, Target } from 'lucide-react';
+import { Code2, Palette, Video, Zap, Heart, Target, Award, Users } from 'lucide-react';
 
 const skills = [
-  { name: 'HTML/CSS', level: 95 },
-  { name: 'JavaScript', level: 90 },
-  { name: 'React', level: 85 },
-  { name: 'Graphic Design', level: 95 },
-  { name: 'Video Editing', level: 90 },
-  { name: 'UI/UX Design', level: 85 },
+  { name: 'Adobe Illustrator', level: 95 },
+  { name: 'Adobe Photoshop', level: 95 },
+  { name: 'Premiere Pro', level: 90 },
+  { name: 'HTML/CSS/JavaScript', level: 92 },
+  { name: 'Filmora', level: 88 },
+  { name: 'PixelLab', level: 85 },
 ];
 
 const features = [
   {
-    icon: Code2,
-    title: 'Web Development',
-    description: 'Clean, efficient code with modern technologies',
-  },
-  {
     icon: Palette,
-    title: 'Graphic Design',
-    description: 'Eye-catching visuals that tell your story',
+    title: 'Branding',
+    description: 'Logo & Identity Design',
   },
   {
     icon: Video,
-    title: 'Video Editing',
-    description: 'Professional videos that engage audiences',
+    title: 'Editing',
+    description: 'Video Production',
   },
+  {
+    icon: Code2,
+    title: 'Web Dev',
+    description: 'Clean Responsive Sites',
+  },
+];
+
+const highlights = [
+  { icon: Award, text: '3+ years delivering logos, edits & websites' },
+  { icon: Users, text: 'Worked with Global Managers, Super Admins & Agency Owners' },
+  { icon: Target, text: 'Owns & runs multiple websites — understands real business needs' },
 ];
 
 const AboutSection = () => {
@@ -48,16 +54,16 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <span className="text-primary font-medium mb-4 block">ABOUT ME</span>
+          <span className="text-primary font-medium mb-4 block">ABOUT MR DANISH</span>
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
             Turning <span className="text-gradient">Vision</span> Into Reality
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A passionate creative professional from Pakistan, dedicated to delivering exceptional digital solutions
+            A passionate creative professional from Pakistan, dedicated to delivering exceptional digital solutions worldwide
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Side - Story */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -71,21 +77,45 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-display font-bold">My Journey</h3>
-                  <p className="text-muted-foreground">From dreams to reality</p>
+                  <p className="text-muted-foreground">From Malakwal to Global</p>
                 </div>
               </div>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Based in <span className="text-foreground font-medium">Malakwal, Punjab, Pakistan</span>, 
-                I've been crafting digital experiences for over 3 years. My journey began with a passion 
-                for creating beautiful things and has evolved into a mission to help businesses succeed online.
+                Hi, I'm <span className="text-foreground font-semibold">Danish Jani</span> 👋 — a professional 
+                <span className="text-foreground font-medium"> graphic designer, video editor, and web developer</span> with 
+                over <span className="text-primary font-semibold">3 years of experience</span> delivering creative and technical solutions.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Specializing in the <span className="text-foreground font-medium">live streaming industry</span>, 
-                I create tools, websites, and branding for agencies on platforms like Poppo Live, Bigo Live, and Tango. 
-                Every project is a new opportunity to push creative boundaries.
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                I've collaborated with <span className="text-foreground font-medium">international clients and high-level teams</span>, 
+                including <span className="text-primary">Global Managers, Super Admins, BD Officials, Official Coin Sellers, 
+                and Agency Owners</span> from various live streaming apps. This experience has given me a deep understanding 
+                of <span className="text-foreground font-medium">how digital businesses and apps grow worldwide</span>.
               </p>
+
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                If you're looking for someone who understands both <span className="text-foreground font-medium">creativity and business growth</span>, 
+                I'm the right choice. Let's collaborate and take your ideas to the next level 🚀
+              </p>
+
+              {/* Highlights */}
+              <div className="space-y-3 mb-8">
+                {highlights.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ delay: 0.5 + index * 0.1 }}
+                    className="flex items-center gap-3 text-sm"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-4 h-4 text-primary" />
+                    </div>
+                    <span className="text-muted-foreground">{item.text}</span>
+                  </motion.div>
+                ))}
+              </div>
 
               <div className="grid grid-cols-3 gap-4">
                 {features.map((feature, index) => (
@@ -97,7 +127,8 @@ const AboutSection = () => {
                     className="text-center p-4 rounded-2xl bg-secondary/50"
                   >
                     <feature.icon className="w-6 h-6 text-primary mx-auto mb-2" />
-                    <span className="text-xs text-muted-foreground">{feature.title}</span>
+                    <span className="text-xs font-medium block">{feature.title}</span>
+                    <span className="text-xs text-muted-foreground">{feature.description}</span>
                   </motion.div>
                 ))}
               </div>
@@ -154,8 +185,8 @@ const AboutSection = () => {
                 <div className="flex items-center gap-3">
                   <Zap className="w-5 h-5 text-primary" />
                   <span className="text-sm">
-                    <span className="text-foreground font-medium">Always Learning:</span>{' '}
-                    <span className="text-muted-foreground">Exploring new technologies & trends</span>
+                    <span className="text-foreground font-medium">Also Experienced:</span>{' '}
+                    <span className="text-muted-foreground">Maya, AutoCAD, 3D Modeling</span>
                   </span>
                 </div>
               </motion.div>
