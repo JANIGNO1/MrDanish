@@ -2,56 +2,56 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { 
-  Globe, 
   Brush, 
   Film, 
-  Smartphone, 
-  Megaphone, 
-  Layers,
+  Globe, 
+  ImageIcon, 
+  Video,
+  Palette,
   ArrowUpRight 
 } from 'lucide-react';
 
 const services = [
   {
-    icon: Globe,
-    title: 'Web Development',
-    description: 'Custom websites built with modern technologies. Responsive, fast, and SEO-optimized.',
-    features: ['HTML/CSS/JS', 'React', 'Landing Pages', 'Web Apps'],
+    icon: Palette,
+    title: 'Logo Design & Identity',
+    description: 'Unique Logos, Brand Kits, Social Assets. Delivered With Editable Source Files (AI/PSD), JPG, PNG And Usage Guide.',
+    features: ['Custom Logos', 'Brand Kits', 'Social Assets', 'Source Files'],
     gradient: 'from-violet-500 to-purple-600',
-  },
-  {
-    icon: Brush,
-    title: 'Graphic Design',
-    description: 'Eye-catching visuals that communicate your brand message effectively.',
-    features: ['Logos', 'Thumbnails', 'Social Media', 'Branding'],
-    gradient: 'from-pink-500 to-rose-600',
   },
   {
     icon: Film,
     title: 'Video Editing',
-    description: 'Professional video editing that tells compelling stories and engages viewers.',
-    features: ['Promo Videos', 'Reels', 'Intros', 'Motion Graphics'],
+    description: 'YouTube/TikTok Edits, Promos, Ads, Subtitles, Color & Sound Polish. Fast Delivery With Revisions Until You\'re Happy.',
+    features: ['YouTube Edits', 'TikTok Content', 'Promos & Ads', 'Color Grading'],
+    gradient: 'from-pink-500 to-rose-600',
+  },
+  {
+    icon: Globe,
+    title: 'Website Development',
+    description: 'Clean, Responsive Sites Using HTML, CSS & JavaScript. Landing Pages, Portfolios, Agency Sites And App Promo Pages.',
+    features: ['Landing Pages', 'Portfolios', 'Agency Sites', 'App Promos'],
     gradient: 'from-cyan-500 to-teal-600',
   },
   {
-    icon: Smartphone,
-    title: 'Live Stream Tools',
-    description: 'Specialized tools and assets for live streaming agencies and hosts.',
+    icon: Video,
+    title: 'Live Stream Assets',
+    description: 'Professional overlays, alerts, panels, and graphics for live streaming platforms like Poppo Live, Bigo Live, Tango.',
     features: ['Overlays', 'Alerts', 'Panels', 'Emotes'],
     gradient: 'from-orange-500 to-amber-600',
   },
   {
-    icon: Megaphone,
-    title: 'Landing Pages',
-    description: 'High-converting landing pages designed to capture leads and drive action.',
-    features: ['Lead Gen', 'Product Launch', 'Events', 'Agency Pages'],
+    icon: ImageIcon,
+    title: 'Thumbnails & Graphics',
+    description: 'Eye-catching thumbnails for YouTube, social media posts, banners, and promotional materials that drive engagement.',
+    features: ['YouTube Thumbnails', 'Social Media', 'Banners', 'Posters'],
     gradient: 'from-emerald-500 to-green-600',
   },
   {
-    icon: Layers,
-    title: 'UI/UX Design',
-    description: 'User-centered design that creates intuitive and delightful experiences.',
-    features: ['Wireframes', 'Prototypes', 'User Flows', 'Design Systems'],
+    icon: Brush,
+    title: 'Brand Strategy',
+    description: 'Complete branding solutions from concept to execution. Build a memorable brand that resonates with your audience.',
+    features: ['Brand Guidelines', 'Visual Identity', 'Marketing Assets', 'Consulting'],
     gradient: 'from-blue-500 to-indigo-600',
   },
 ];
@@ -79,7 +79,7 @@ const ServicesSection = () => {
             What I <span className="text-gradient">Offer</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Comprehensive digital solutions tailored to elevate your brand and achieve your goals
+            Comprehensive digital solutions tailored to elevate your brand and achieve your goals globally
           </p>
         </motion.div>
 
@@ -103,7 +103,7 @@ const ServicesSection = () => {
                 <h3 className="text-2xl font-display font-bold mb-3 group-hover:text-gradient transition-all">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-6 leading-relaxed text-sm">
                   {service.description}
                 </p>
 
@@ -146,16 +146,18 @@ const ServicesSection = () => {
                 Have a Project in Mind?
               </h3>
               <p className="text-white/80">
-                Let's work together to bring your vision to life
+                Let's collaborate and take your ideas to the next level 🚀
               </p>
             </div>
             <motion.a
-              href="#contact"
+              href="https://wa.me/923400278535"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-white text-primary rounded-full font-semibold whitespace-nowrap hover:shadow-xl transition-shadow"
             >
-              Start a Project
+              WhatsApp Me
             </motion.a>
           </div>
         </motion.div>

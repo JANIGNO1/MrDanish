@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <a href="#home" className="text-2xl font-display font-bold text-gradient mb-2 block">
-              MR DANISH
+              MR DANISH JANI
             </a>
             <p className="text-muted-foreground text-sm">
               © 2024 Danish Jani. All rights reserved.
@@ -24,14 +24,14 @@ const Footer = () => {
 
           {/* Made With Love */}
           <div className="flex items-center gap-2 text-muted-foreground">
-            <span>Made with</span>
+            <span>Crafted with</span>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
             >
               <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             </motion.div>
-            <span>in Pakistan</span>
+            <span>in Malakwal, Pakistan 🇵🇰</span>
           </div>
 
           {/* Back to Top */}
@@ -43,6 +43,16 @@ const Footer = () => {
           >
             <ArrowUp className="w-5 h-5" />
           </motion.button>
+        </div>
+
+        {/* Quick Links */}
+        <div className="flex flex-wrap justify-center gap-6 mt-8 pt-8 border-t border-border/30">
+          <a href="#about" className="text-muted-foreground hover:text-primary transition-colors text-sm">About</a>
+          <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Services</a>
+          <a href="#portfolio" className="text-muted-foreground hover:text-primary transition-colors text-sm">Portfolio</a>
+          <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">Contact</a>
+          <a href="https://pro.fiverr.com/s/LdX009A" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors text-sm">Fiverr</a>
+          <a href="https://www.upwork.com/freelancers/~01c99e84c6a4eb52e2" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors text-sm">Upwork</a>
         </div>
       </div>
     </footer>

@@ -45,7 +45,7 @@ const HeroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-8"
           >
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">Available for Freelance Work</span>
+            <span className="text-sm text-muted-foreground">Available for Freelance Work Worldwide 🌎</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -55,12 +55,12 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 leading-tight"
           >
-            <span className="text-foreground">I'm </span>
+            <span className="text-foreground">Hi, I'm </span>
             <span className="text-gradient">Danish Jani</span>
             <br />
             <span className="text-foreground">Creative</span>{' '}
             <span className="relative inline-block">
-              <span className="text-gradient-accent">Developer</span>
+              <span className="text-gradient-accent">Professional</span>
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
@@ -75,12 +75,11 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12"
+            className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12"
           >
-            Crafting stunning digital experiences through{' '}
-            <span className="text-foreground font-medium">Web Development</span>,{' '}
-            <span className="text-foreground font-medium">Graphic Design</span> &{' '}
-            <span className="text-foreground font-medium">Video Editing</span>
+            Professional <span className="text-foreground font-medium">Graphic Designer</span>,{' '}
+            <span className="text-foreground font-medium">Video Editor</span> &{' '}
+            <span className="text-foreground font-medium">Web Developer</span> serving international clients in the live streaming industry
           </motion.p>
 
           {/* CTA Buttons */}
@@ -101,13 +100,15 @@ const HeroSection = () => {
             </motion.a>
             
             <motion.a
-              href="#about"
+              href="https://wa.me/923400278535"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="group px-8 py-4 glass-strong text-foreground rounded-full font-semibold text-lg flex items-center gap-2"
             >
               <Play className="w-5 h-5" />
-              Watch Intro
+              Let's Talk
             </motion.a>
           </motion.div>
 
@@ -120,9 +121,9 @@ const HeroSection = () => {
           >
             {[
               { value: '3+', label: 'Years Experience' },
-              { value: '100+', label: 'Projects Done' },
-              { value: '50+', label: 'Happy Clients' },
-              { value: '24/7', label: 'Support' },
+              { value: '150+', label: 'Projects Delivered' },
+              { value: '50+', label: 'Global Clients' },
+              { value: '100%', label: 'Client Satisfaction' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
