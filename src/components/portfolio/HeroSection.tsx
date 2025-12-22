@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Sparkles, Play, Star, Zap, Award, Crown, Users, Globe, Shield, Coins } from 'lucide-react';
 import { useEffect, useState } from 'react';
-
+import profileMain from '@/assets/profile-main.jpg';
 // Stars background component
 const StarsBackground = () => {
   const [stars, setStars] = useState<Array<{ id: number; x: number; y: number; size: number; delay: number }>>([]);
@@ -190,38 +190,76 @@ const HeroSection = () => {
       />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* Floating icons around heading */}
-          <div className="absolute inset-0 pointer-events-none">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            {/* Profile Image - Left Side */}
             <motion.div
-              animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="absolute top-20 left-10 md:left-20"
+              initial={{ opacity: 0, scale: 0.8, x: -50 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative flex-shrink-0"
             >
-              <Star className="w-10 h-10 text-yellow-400 drop-shadow-[0_0_10px_hsl(45_100%_50%_/_0.8)]" fill="currentColor" />
+              <div className="relative">
+                {/* Glow effect behind image */}
+                <div className="absolute inset-0 bg-gradient-primary rounded-full blur-3xl opacity-50 scale-110" />
+                <motion.div
+                  animate={{ 
+                    boxShadow: [
+                      '0 0 30px hsl(262 83% 58% / 0.4)',
+                      '0 0 60px hsl(262 83% 58% / 0.6)',
+                      '0 0 30px hsl(262 83% 58% / 0.4)',
+                    ]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/50"
+                >
+                  <img 
+                    src={profileMain} 
+                    alt="Danish Jani - Professional"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </motion.div>
+                {/* Floating elements around profile */}
+                <motion.div
+                  animate={{ y: [0, -10, 0], rotate: [0, 10, 0] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                  className="absolute -top-4 -right-4"
+                >
+                  <div className="w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center shadow-lg">
+                    <Crown className="w-6 h-6 text-black" />
+                  </div>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                  className="absolute -bottom-2 -left-2"
+                >
+                  <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center shadow-lg">
+                    <Star className="w-5 h-5 text-white" fill="currentColor" />
+                  </div>
+                </motion.div>
+              </div>
             </motion.div>
-            <motion.div
-              animate={{ y: [0, 20, 0], rotate: [0, -10, 0] }}
-              transition={{ duration: 5, repeat: Infinity }}
-              className="absolute top-32 right-10 md:right-20"
-            >
-              <Crown className="w-12 h-12 text-amber-400 drop-shadow-[0_0_15px_hsl(45_100%_50%_/_0.8)]" />
-            </motion.div>
-            <motion.div
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute bottom-40 left-20"
-            >
-              <Zap className="w-8 h-8 text-primary drop-shadow-[0_0_10px_hsl(262_83%_58%_/_0.8)]" fill="currentColor" />
-            </motion.div>
-            <motion.div
-              animate={{ y: [0, 15, 0], rotate: [0, 360] }}
-              transition={{ duration: 8, repeat: Infinity }}
-              className="absolute bottom-60 right-20"
-            >
-              <Award className="w-10 h-10 text-accent drop-shadow-[0_0_10px_hsl(173_80%_40%_/_0.8)]" />
-            </motion.div>
-          </div>
+
+            {/* Content - Right Side */}
+            <div className="text-center lg:text-left flex-1">
+              {/* Floating icons around heading */}
+              <div className="absolute inset-0 pointer-events-none hidden lg:block">
+                <motion.div
+                  animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                  className="absolute top-20 right-10"
+                >
+                  <Star className="w-10 h-10 text-yellow-400 drop-shadow-[0_0_10px_hsl(45_100%_50%_/_0.8)]" fill="currentColor" />
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                  className="absolute bottom-40 right-20"
+                >
+                  <Zap className="w-8 h-8 text-primary drop-shadow-[0_0_10px_hsl(262_83%_58%_/_0.8)]" fill="currentColor" />
+                </motion.div>
+              </div>
 
           {/* Top Badge */}
           <motion.div
@@ -433,6 +471,8 @@ const HeroSection = () => {
               </motion.div>
             ))}
           </motion.div>
+            </div>
+          </div>
         </div>
       </div>
 

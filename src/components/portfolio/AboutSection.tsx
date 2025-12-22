@@ -2,7 +2,9 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Code2, Palette, Video, Zap, Heart, Target, Award, Users } from 'lucide-react';
-
+import photoThrone from '@/assets/photo-throne.jpg';
+import photoNature from '@/assets/photo-nature.jpg';
+import photoHorse from '@/assets/photo-horse.jpg';
 const skills = [
   { name: 'Adobe Illustrator', level: 95 },
   { name: 'Adobe Photoshop', level: 95 },
@@ -61,6 +63,32 @@ const AboutSection = () => {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A passionate creative professional from Pakistan, dedicated to delivering exceptional digital solutions worldwide
           </p>
+        </motion.div>
+
+        {/* Photo Gallery Row */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="grid grid-cols-3 gap-4 mb-16"
+        >
+          {[photoThrone, photoNature, photoHorse].map((photo, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="relative aspect-[3/4] rounded-2xl overflow-hidden group"
+              style={{
+                boxShadow: '0 0 30px hsl(262 83% 58% / 0.3)'
+              }}
+            >
+              <img
+                src={photo}
+                alt={`Danish Jani ${index + 1}`}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </motion.div>
+          ))}
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
