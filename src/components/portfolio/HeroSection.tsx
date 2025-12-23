@@ -1,20 +1,20 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Sparkles, Play, Star, Award, Users, Globe, Briefcase, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { ArrowDown, Sparkles, Play, Star, Award, Users, Globe, Briefcase, Linkedin, Twitter, Instagram, Crown, Zap } from 'lucide-react';
 import { useEffect, useState, useCallback } from 'react';
 import profileMain from '@/assets/profile-main.jpg';
+import StarField from './StarField';
 
 // Floating particles with professional blue theme
 const FloatingParticles = () => {
-  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; size: number; delay: number; type: 'circle' | 'code' | 'design' }>>([]);
+  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; size: number; delay: number }>>([]);
 
   useEffect(() => {
-    const generated = Array.from({ length: 40 }, (_, i) => ({
+    const generated = Array.from({ length: 30 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
       size: Math.random() * 4 + 2,
       delay: Math.random() * 3,
-      type: ['circle', 'code', 'design'][i % 3] as 'circle' | 'code' | 'design',
     }));
     setParticles(generated);
   }, []);
@@ -24,17 +24,19 @@ const FloatingParticles = () => {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-primary/30"
+          className="absolute rounded-full"
           style={{
             left: `${particle.x}%`,
             top: `${particle.y}%`,
             width: particle.size,
             height: particle.size,
+            background: 'radial-gradient(circle, hsl(var(--primary) / 0.6) 0%, transparent 70%)',
+            boxShadow: `0 0 ${particle.size * 2}px hsl(var(--primary) / 0.3)`,
           }}
           animate={{
             y: [0, -30, 0],
             opacity: [0.3, 0.8, 0.3],
-            scale: [1, 1.2, 1],
+            scale: [1, 1.3, 1],
           }}
           transition={{
             duration: 4 + Math.random() * 2,
@@ -48,31 +50,17 @@ const FloatingParticles = () => {
   );
 };
 
-// Grid background pattern
-const GridPattern = () => (
-  <div 
-    className="absolute inset-0 opacity-30"
-    style={{
-      backgroundImage: `
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)
-      `,
-      backgroundSize: '60px 60px'
-    }}
-    aria-hidden="true"
-  />
-);
-
-// Roles/titles
+// Roles/titles with expanded global roles
 const roles = [
-  'Graphic Designer',
-  'Video Editor', 
+  '#1 Global Freelancer',
+  'Creative Professional',
+  'Global Manager',
+  'Agency Owner',
+  'BD Official',
   'Web Developer',
-  'UI/UX Designer',
-  'Digital Marketer',
 ];
 
-// Social links
+// Social links with glow effect
 const socialLinks = [
   { icon: Linkedin, href: 'https://linkedin.com/in/danishjani', label: 'LinkedIn' },
   { icon: Twitter, href: 'https://twitter.com/janigno1', label: 'X/Twitter' },
@@ -102,61 +90,85 @@ const HeroSection = () => {
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-hero" />
       
-      {/* Animated Gradient Orbs */}
+      {/* Star Field */}
+      <StarField count={80} />
+      
+      {/* Animated Gradient Orbs with Glow */}
       <motion.div
         animate={{ x: [0, 50, 0], y: [0, -30, 0] }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[150px]"
+        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[180px]"
         aria-hidden="true"
       />
       <motion.div
         animate={{ x: [0, -40, 0], y: [0, 40, 0] }}
         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent/20 rounded-full blur-[120px]"
+        className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[150px]"
         aria-hidden="true"
       />
       
-      {/* Particles & Grid */}
+      {/* Particles */}
       <FloatingParticles />
-      <GridPattern />
 
       {/* Content Container */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             
-            {/* Profile Image - Left Side */}
+            {/* Profile Image - Left Side with Star Glow */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8, x: -50 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               className="relative flex-shrink-0 order-2 lg:order-1"
             >
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-primary/30 rounded-full blur-3xl scale-110" aria-hidden="true" />
+              {/* Star Burst Background */}
+              <motion.div 
+                className="absolute inset-0 rounded-full"
+                animate={{ 
+                  boxShadow: [
+                    '0 0 40px hsl(220 80% 55% / 0.3), 0 0 80px hsl(220 80% 55% / 0.2)',
+                    '0 0 60px hsl(220 80% 55% / 0.5), 0 0 120px hsl(220 80% 55% / 0.3)',
+                    '0 0 40px hsl(220 80% 55% / 0.3), 0 0 80px hsl(220 80% 55% / 0.2)',
+                  ]
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+                style={{ 
+                  background: 'radial-gradient(circle, hsl(220 80% 55% / 0.15) 0%, transparent 60%)',
+                  transform: 'scale(1.3)'
+                }}
+                aria-hidden="true" 
+              />
               
               {/* Profile Image */}
               <motion.div
-                animate={{ boxShadow: ['0 0 30px hsla(220 80% 55% / 0.3)', '0 0 50px hsla(220 80% 55% / 0.5)', '0 0 30px hsla(220 80% 55% / 0.3)'] }}
+                className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden"
+                animate={{ 
+                  boxShadow: [
+                    '0 0 30px hsl(220 80% 55% / 0.4), inset 0 0 30px hsl(220 80% 55% / 0.1)',
+                    '0 0 50px hsl(220 80% 55% / 0.6), inset 0 0 50px hsl(220 80% 55% / 0.15)',
+                    '0 0 30px hsl(220 80% 55% / 0.4), inset 0 0 30px hsl(220 80% 55% / 0.1)',
+                  ]
+                }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-primary/30"
+                style={{ border: '3px solid hsl(220 80% 55% / 0.5)' }}
               >
                 <img 
                   src={profileMain} 
-                  alt="Danish Jani - Professional Freelance Creative"
+                  alt="Danish Jani - #1 Top-Rated Global Freelancer"
                   className="w-full h-full object-cover object-top"
                   loading="eager"
                 />
               </motion.div>
               
-              {/* Floating Badge - Award */}
+              {/* Floating Badge - Crown */}
               <motion.div
                 animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-2 -right-2"
+                className="absolute -top-4 -right-4"
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg" aria-hidden="true">
-                  <Award className="w-7 h-7 text-white" />
+                <div className="w-16 h-16 bg-gradient-gold rounded-2xl flex items-center justify-center glow-gold" aria-hidden="true">
+                  <Crown className="w-8 h-8 text-white" />
                 </div>
               </motion.div>
               
@@ -164,10 +176,21 @@ const HeroSection = () => {
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -bottom-2 -left-2"
+                className="absolute -bottom-2 -left-4"
               >
-                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg" aria-hidden="true">
-                  <Star className="w-6 h-6 text-white" fill="currentColor" />
+                <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center glow" aria-hidden="true">
+                  <Star className="w-7 h-7 text-white" fill="currentColor" />
+                </div>
+              </motion.div>
+
+              {/* Floating Badge - Zap */}
+              <motion.div
+                animate={{ y: [0, -6, 0], x: [0, 4, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity }}
+                className="absolute top-1/2 -right-6"
+              >
+                <div className="w-12 h-12 glass-card rounded-xl flex items-center justify-center border-glow" aria-hidden="true">
+                  <Zap className="w-6 h-6 text-primary" />
                 </div>
               </motion.div>
             </motion.div>
@@ -175,7 +198,7 @@ const HeroSection = () => {
             {/* Content - Right Side */}
             <div className="text-center lg:text-left flex-1 order-1 lg:order-2">
               
-              {/* Social Links - Top */}
+              {/* Social Links - Top with Glow */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -188,9 +211,9 @@ const HeroSection = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileHover={{ scale: 1.15, y: -3 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 glass-card rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
+                    className="w-11 h-11 glass-card rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-all card-glow"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5" />
@@ -198,30 +221,36 @@ const HeroSection = () => {
                 ))}
               </motion.div>
 
-              {/* Top Badge */}
+              {/* Top Badge with Glow */}
               <motion.div
                 initial={{ opacity: 0, y: 20, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="inline-flex items-center gap-2 px-5 py-2.5 glass-card rounded-full mb-6"
+                style={{ boxShadow: '0 0 20px hsl(220 80% 55% / 0.2)' }}
               >
-                <Sparkles className="w-4 h-4 text-primary" aria-hidden="true" />
+                <motion.div
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                >
+                  <Sparkles className="w-4 h-4 text-primary" aria-hidden="true" />
+                </motion.div>
                 <span className="text-sm font-medium text-foreground">
-                  🏆 Worldwide Top Rated • Available 24/7
+                  🏆 #1 Worldwide Top Rated • Available 24/7
                 </span>
               </motion.div>
 
-              {/* Main Heading */}
+              {/* Main Heading with Text Glow */}
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-4 leading-tight"
               >
-                <span className="text-foreground">Danish Jani</span>
+                <span className="text-foreground text-glow-white">Danish Jani</span>
               </motion.h1>
 
-              {/* Rotating Roles */}
+              {/* Rotating Roles with Glow */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -235,7 +264,7 @@ const HeroSection = () => {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -40, opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-2xl md:text-4xl font-display font-bold text-gradient"
+                    className="text-2xl md:text-4xl font-display font-bold text-gradient text-glow"
                   >
                     {roles[currentRoleIndex]}
                   </motion.div>
@@ -249,12 +278,12 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
               >
-                Creative Professional • Global Manager • Agency Owner
+                Super Admin • BD Official • Coins Seller • Agency Owner
                 <br />
-                <span className="text-foreground font-medium">3+ Years Experience • 150+ Projects • 50+ Global Clients</span>
+                <span className="text-foreground font-medium">Trusted by Hong Kong, Malaysia, Singapore & Global Industries</span>
               </motion.p>
 
-              {/* CTA Buttons */}
+              {/* CTA Buttons with Enhanced Glow */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -285,7 +314,7 @@ const HeroSection = () => {
                 </motion.a>
               </motion.div>
 
-              {/* Quick Stats */}
+              {/* Quick Stats with Glow */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -302,7 +331,8 @@ const HeroSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8 + index * 0.1 }}
-                    className="text-center glass-card p-4 rounded-2xl"
+                    whileHover={{ y: -5 }}
+                    className="text-center glass-card p-4 rounded-2xl card-glow"
                   >
                     <stat.icon className="w-5 h-5 text-primary mx-auto mb-2" aria-hidden="true" />
                     <div className="text-2xl font-bold text-foreground">{stat.value}</div>
@@ -315,7 +345,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator with Glow */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -330,7 +360,13 @@ const HeroSection = () => {
           aria-label="Scroll to About section"
         >
           <span className="text-xs font-medium uppercase tracking-wider">Scroll</span>
-          <ArrowDown className="w-5 h-5" />
+          <motion.div
+            animate={{ boxShadow: ['0 0 10px hsl(220 80% 55% / 0.3)', '0 0 20px hsl(220 80% 55% / 0.5)', '0 0 10px hsl(220 80% 55% / 0.3)'] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="p-2 rounded-full glass-card"
+          >
+            <ArrowDown className="w-5 h-5" />
+          </motion.div>
         </motion.a>
       </motion.div>
     </section>

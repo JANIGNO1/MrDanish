@@ -9,8 +9,13 @@ import {
   Search, 
   BarChart3, 
   Globe, 
-  FileText 
+  Building,
+  Coins,
+  Server,
+  TrendingUp,
+  Users
 } from 'lucide-react';
+import StarField from './StarField';
 
 interface Skill {
   name: string;
@@ -20,14 +25,14 @@ interface Skill {
 }
 
 const skills: Skill[] = [
+  { name: 'Business Development', level: 95, icon: TrendingUp, color: 'from-blue-500 to-cyan-500' },
+  { name: 'Agency Management', level: 90, icon: Building, color: 'from-purple-500 to-pink-500' },
   { name: 'Adobe Illustrator', level: 95, icon: Palette, color: 'from-orange-500 to-orange-600' },
-  { name: 'Figma', level: 90, icon: Figma, color: 'from-purple-500 to-pink-500' },
-  { name: 'Adobe Premiere Pro', level: 85, icon: Film, color: 'from-violet-500 to-purple-600' },
-  { name: 'HTML/CSS/JS', level: 90, icon: Code, color: 'from-blue-500 to-cyan-500' },
-  { name: 'React', level: 80, icon: Code, color: 'from-cyan-400 to-blue-500' },
-  { name: 'SEO Tools', level: 85, icon: Search, color: 'from-green-500 to-emerald-500' },
-  { name: 'Social Media Analytics', level: 80, icon: BarChart3, color: 'from-pink-500 to-rose-500' },
-  { name: 'CMS (WordPress)', level: 90, icon: Globe, color: 'from-indigo-500 to-blue-500' },
+  { name: 'Web Development', level: 90, icon: Code, color: 'from-cyan-400 to-blue-500' },
+  { name: 'Video Editing', level: 88, icon: Film, color: 'from-violet-500 to-purple-600' },
+  { name: 'Cryptocurrency Sales', level: 85, icon: Coins, color: 'from-yellow-500 to-orange-500' },
+  { name: 'Web Hosting', level: 90, icon: Server, color: 'from-green-500 to-emerald-500' },
+  { name: 'Team Leadership', level: 92, icon: Users, color: 'from-pink-500 to-rose-500' },
 ];
 
 // Circular Progress Component
@@ -123,6 +128,7 @@ const SkillsSection = () => {
     <section id="skills" className="relative py-24 overflow-hidden" aria-labelledby="skills-heading">
       {/* Background */}
       <div className="absolute inset-0 bg-background" />
+      <StarField count={30} />
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[150px] -translate-y-1/2" aria-hidden="true" />
       <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-accent/10 rounded-full blur-[100px]" aria-hidden="true" />
 
