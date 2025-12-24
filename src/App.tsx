@@ -6,6 +6,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
+// Service Pages
+import LiveStreamingManagement from "./pages/services/LiveStreamingManagement";
+import AgencySetup from "./pages/services/AgencySetup";
+import CoinsSelling from "./pages/services/CoinsSelling";
+import HostingWorldwide from "./pages/services/HostingWorldwide";
+import GraphicDesign from "./pages/services/GraphicDesign";
+import VideoEditing from "./pages/services/VideoEditing";
+import WebDevelopment from "./pages/services/WebDevelopment";
+import SocialMediaManagement from "./pages/services/SocialMediaManagement";
+import SEOOptimization from "./pages/services/SEOOptimization";
+import DigitalMarketing from "./pages/services/DigitalMarketing";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -16,6 +28,19 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          
+          {/* Service Pages */}
+          <Route path="/services/live-streaming-management" element={<LiveStreamingManagement />} />
+          <Route path="/services/agency-setup" element={<AgencySetup />} />
+          <Route path="/services/coins-selling" element={<CoinsSelling />} />
+          <Route path="/services/hosting-worldwide" element={<HostingWorldwide />} />
+          <Route path="/services/graphic-design" element={<GraphicDesign />} />
+          <Route path="/services/video-editing" element={<VideoEditing />} />
+          <Route path="/services/web-development" element={<WebDevelopment />} />
+          <Route path="/services/social-media-management" element={<SocialMediaManagement />} />
+          <Route path="/services/seo-optimization" element={<SEOOptimization />} />
+          <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
