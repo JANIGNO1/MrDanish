@@ -5,69 +5,78 @@ const CoinsSelling = () => {
   return (
     <ServicePageLayout
       title="Official Coins Selling"
-      subtitle="Trusted Crypto & Virtual Currency"
-      description="As an Official Coins Seller, I provide secure cryptocurrency and virtual currency services for live streaming platforms, gaming, and digital ecosystems worldwide."
+      subtitle="Trusted Virtual Currency Services"
+      description="As an Official Coins Seller, I provide secure virtual currency services for live streaming platforms including Poppo Live, Bigo Live, TikTok Live, and gaming ecosystems worldwide. Trusted by 500+ clients in Hong Kong, Singapore, Malaysia."
+      metaTitle="Official Coins Seller 2025 | Danish Jani - Poppo Live, Bigo Live, TikTok Live Coins | Secure & Fast"
+      metaDescription="Buy live streaming coins from Danish Jani - Official Coins Seller. Secure Poppo Live coins, Bigo Live coins, TikTok Live coins. Best rates, instant delivery, 24/7 support. Trusted by 500+ clients worldwide."
+      keywords={['coins selling', 'Poppo Live coins', 'Bigo Live coins', 'TikTok Live coins', 'live streaming coins', 'buy coins', 'official coins seller', 'virtual currency', 'live app coins']}
       icon={<Coins className="w-10 h-10 text-white" />}
       gradient="from-amber-500 to-orange-600"
       benefits={[
-        "Official seller status ensures 100% secure transactions",
-        "Competitive rates for bulk purchases and regular clients",
-        "Support for multiple platforms (Poppo, Bigo, Tango coins)",
-        "Fast delivery with real-time transaction confirmation",
-        "24/7 availability across all time zones",
-        "Trusted by streamers and agencies in 12+ countries",
+        "Official Coins Seller status ensures 100% secure and legitimate transactions",
+        "Best competitive rates for bulk purchases and regular agency clients",
+        "Support for all major platforms: Poppo Live, Bigo Live, TikTok Live, Tango, Zero Live, and more",
+        "Instant delivery with real-time transaction confirmation within 5-30 minutes",
+        "24/7 availability across all time zones for global clients",
+        "Trusted by streamers and agencies in Hong Kong, Singapore, Malaysia, and 15+ countries",
+        "Bulk discounts for agencies and regular customers",
+        "Multiple payment methods including bank transfer, crypto, and mobile wallets",
       ]}
       processSteps={[
         {
           title: "Requirement Analysis",
-          description: "Discuss your coin requirements, preferred platforms, and volume needs to determine the best package for you.",
+          description: "Discuss your coin requirements, preferred platforms (Poppo Live, Bigo Live, TikTok Live), and volume needs to determine the best package.",
         },
         {
-          title: "Secure Payment",
-          description: "Process payment through verified and secure channels with full transaction transparency and receipts.",
+          title: "Secure Payment Processing",
+          description: "Process payment through verified and secure channels with full transaction transparency. Multiple payment options available.",
         },
         {
-          title: "Instant Delivery",
-          description: "Receive your coins directly to your account within minutes of confirmed payment.",
+          title: "Instant Coin Delivery",
+          description: "Receive your coins directly to your account within 5-30 minutes of confirmed payment. Real-time confirmation provided.",
         },
         {
-          title: "Ongoing Support",
-          description: "Continued assistance for regular purchases, bulk deals, and any platform-related queries.",
+          title: "Ongoing Partnership",
+          description: "Continued assistance for regular purchases, bulk deals, agency partnerships, and any platform-related queries. 24/7 support.",
         },
       ]}
       caseStudies={[
         {
           title: "Live Streaming Agency - Hong Kong",
-          description: "Provided bulk coin supply for agency's 50+ streamers with monthly subscription arrangement.",
-          result: "30% cost savings compared to platform direct purchases",
+          description: "Provided bulk Poppo Live and Bigo Live coin supply for agency's 100+ streamers with monthly subscription arrangement.",
+          result: "30% cost savings compared to platform direct purchases, $20K+ monthly volume",
         },
         {
-          title: "Gaming Community - Singapore",
-          description: "Regular coin supply for gaming guild's tournament prizes and community rewards.",
-          result: "Reliable partner for 2+ years with 500+ transactions",
+          title: "Entertainment Network - Singapore",
+          description: "Regular coin supply for entertainment company's host rewards and gifting promotions on TikTok Live.",
+          result: "Reliable partner for 3+ years with 1000+ transactions completed",
         },
         {
-          title: "Individual Streamers Network",
-          description: "Built a trusted network of regular streamer clients across Southeast Asia.",
-          result: "95% repeat customer rate with referral growth",
+          title: "Individual Top Hosts Network",
+          description: "Built a trusted network of regular streamer clients across Southeast Asia for Poppo Live and Bigo Live.",
+          result: "95% repeat customer rate with consistent referral growth",
         },
       ]}
       faqs={[
         {
           question: "Are your coin sales officially authorized?",
-          answer: "Yes, I operate as an Official Coins Seller with verified status across supported platforms. All transactions are legitimate and comply with platform terms of service.",
+          answer: "Yes, I operate as an Official Coins Seller with verified status across supported platforms including Poppo Live, Bigo Live, TikTok Live. All transactions are legitimate and comply with platform terms of service.",
         },
         {
-          question: "What payment methods do you accept?",
-          answer: "We accept multiple payment methods including bank transfer, cryptocurrency, PayPal, and various regional payment solutions for global accessibility.",
+          question: "What payment methods do you accept for coin purchases?",
+          answer: "We accept multiple payment methods including bank transfer, cryptocurrency, JazzCash, Easypaisa, PayPal, Wise, and various regional payment solutions for global accessibility.",
         },
         {
-          question: "How fast is coin delivery?",
-          answer: "Most deliveries are completed within 5-30 minutes of confirmed payment. For large orders, delivery may take up to 2 hours depending on platform processing.",
+          question: "How fast is coin delivery on Poppo Live and Bigo Live?",
+          answer: "Most deliveries are completed within 5-30 minutes of confirmed payment. For large orders over $1000, delivery may take up to 2 hours depending on platform processing.",
         },
         {
-          question: "Do you offer bulk discounts?",
-          answer: "Yes! We offer tiered pricing for bulk purchases and special rates for agencies and regular customers. Contact us for custom volume pricing.",
+          question: "Do you offer bulk discounts for agencies?",
+          answer: "Yes! We offer tiered pricing for bulk purchases and special rates for agencies and regular customers. Agencies can save 20-35% compared to individual purchases. Contact us for custom volume pricing.",
+        },
+        {
+          question: "Which live streaming platforms do you sell coins for?",
+          answer: "We sell coins for Poppo Live, Bigo Live, TikTok Live, Tango Live, Zero Live, Joyo Live, Buzzcast Live, Lollipop Live, Boom Live, and more. Contact us for platform-specific availability.",
         },
       ]}
     />

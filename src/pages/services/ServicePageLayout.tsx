@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowLeft, Check, ArrowRight, ChevronDown, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import StarField from '@/components/portfolio/StarField';
 import Navbar from '@/components/portfolio/Navbar';
 import Footer from '@/components/portfolio/Footer';
@@ -32,6 +32,9 @@ interface ServicePageProps {
   caseStudies: CaseStudy[];
   faqs: FAQ[];
   gradient: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  keywords?: string[];
 }
 
 const ServicePageLayout = ({
@@ -44,8 +47,77 @@ const ServicePageLayout = ({
   caseStudies,
   faqs,
   gradient,
+  metaTitle,
+  metaDescription,
+  keywords = [],
 }: ServicePageProps) => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  // Inject FAQ Schema dynamically
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+
+    const serviceSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": title,
+      "description": description,
+      "provider": {
+        "@type": "Person",
+        "name": "Danish Jani",
+        "url": "https://mrdanish.netlify.app"
+      },
+      "areaServed": "Worldwide",
+      "serviceType": title
+    };
+
+    // Create or update FAQ schema script
+    let faqScriptTag = document.querySelector('script[data-schema="faq-page"]');
+    if (!faqScriptTag) {
+      faqScriptTag = document.createElement('script');
+      faqScriptTag.setAttribute('type', 'application/ld+json');
+      faqScriptTag.setAttribute('data-schema', 'faq-page');
+      document.head.appendChild(faqScriptTag);
+    }
+    faqScriptTag.textContent = JSON.stringify(faqSchema);
+
+    // Create or update Service schema script
+    let serviceScriptTag = document.querySelector('script[data-schema="service"]');
+    if (!serviceScriptTag) {
+      serviceScriptTag = document.createElement('script');
+      serviceScriptTag.setAttribute('type', 'application/ld+json');
+      serviceScriptTag.setAttribute('data-schema', 'service');
+      document.head.appendChild(serviceScriptTag);
+    }
+    serviceScriptTag.textContent = JSON.stringify(serviceSchema);
+
+    // Update meta tags
+    document.title = metaTitle || `${title} - Danish Jani | #1 Global Expert`;
+    
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', metaDescription || description);
+    }
+
+    // Cleanup on unmount
+    return () => {
+      const faqScript = document.querySelector('script[data-schema="faq-page"]');
+      const serviceScript = document.querySelector('script[data-schema="service"]');
+      if (faqScript) faqScript.remove();
+      if (serviceScript) serviceScript.remove();
+    };
+  }, [title, description, faqs, metaTitle, metaDescription]);
 
   return (
     <div className="min-h-screen bg-background">

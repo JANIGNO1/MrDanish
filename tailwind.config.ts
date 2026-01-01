@@ -14,9 +14,11 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'Inter', 'sans-serif'],
-        display: ['Montserrat', 'sans-serif'],
-        body: ['Roboto', 'sans-serif'],
+        sans: ['Poppins', 'Inter', 'sans-serif'],
+        display: ['Montserrat', 'Poppins', 'sans-serif'],
+        body: ['Manrope', 'Roboto', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        manrope: ['Manrope', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -10,6 +10,8 @@ import TestimonialsSection from '@/components/portfolio/TestimonialsSection';
 import BlogSection from '@/components/portfolio/BlogSection';
 import ContactSection from '@/components/portfolio/ContactSection';
 import Footer from '@/components/portfolio/Footer';
+import RankingCTA from '@/components/portfolio/RankingCTA';
+import LiveAppsSection from '@/components/portfolio/LiveAppsSection';
 
 const Index = () => {
   useEffect(() => {
@@ -23,9 +25,11 @@ const Index = () => {
       <main>
         <HeroSection />
         <AuthoritySection />
+        <RankingCTA />
         <AboutSection />
         <SkillsSection />
         <ServicesSection />
+        <LiveAppsSection />
         <PortfolioSection />
         <TestimonialsSection />
         <BlogSection />
