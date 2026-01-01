@@ -6,68 +6,77 @@ const AgencySetup = () => {
     <ServicePageLayout
       title="Agency Setup & Management"
       subtitle="Build Your Dream Agency"
-      description="Complete agency creation and management solutions. From legal setup to team recruitment, I help you build and scale successful creative agencies worldwide."
+      description="Complete live streaming agency creation and management solutions. From Super Admin setup to host recruitment, I help you build and scale successful creative agencies worldwide. Trusted by agency owners in Hong Kong, Singapore, Malaysia."
+      metaTitle="Live Streaming Agency Setup 2025 | Danish Jani - Super Admin & Agency Owner | Build Your Agency"
+      metaDescription="Start your live streaming agency with Danish Jani - #1 Agency Owner & Super Admin. Complete agency setup for Poppo Live, Bigo Live, TikTok Live. Host recruitment, coins system, worldwide hosting. 50+ agencies built successfully."
+      keywords={['agency setup', 'live streaming agency', 'agency owner', 'super admin', 'host recruitment', 'Poppo Live agency', 'Bigo Live agency', 'start live streaming business', 'agency management']}
       icon={<Building2 className="w-10 h-10 text-white" />}
       gradient="from-pink-500 to-rose-600"
       benefits={[
-        "End-to-end agency setup from registration to first client",
-        "Team recruitment and talent management systems",
-        "Operational workflows and SOPs for scalable growth",
-        "Client acquisition strategies used by top agencies",
-        "Financial management and invoicing systems setup",
-        "Super Admin dashboard configuration for full control",
+        "End-to-end live streaming agency setup from registration to first host",
+        "Super Admin dashboard configuration for Poppo Live, Bigo Live, and more",
+        "Host recruitment and talent management systems for maximum retention",
+        "Operational workflows and SOPs for scalable agency growth",
+        "Coins system setup and monetization optimization",
+        "BD Official training for international partnership development",
+        "Worldwide hosting provider network access",
+        "24/7 support from experienced agency owner",
       ]}
       processSteps={[
         {
-          title: "Business Foundation",
-          description: "Define your agency's niche, services, and unique value proposition. Set up legal structure and brand identity.",
+          title: "Business Foundation & Platform Selection",
+          description: "Define your agency's niche, choose platforms (Poppo Live, Bigo Live, TikTok Live), and set up Super Admin accounts with proper verification.",
         },
         {
-          title: "Systems & Infrastructure",
-          description: "Implement project management, communication tools, and financial tracking systems for smooth operations.",
+          title: "Systems & Infrastructure Setup",
+          description: "Implement agency management tools, coins tracking systems, host performance dashboards, and financial tracking for smooth operations.",
         },
         {
-          title: "Team Building",
-          description: "Recruit, onboard, and train your initial team with proven processes for maintaining quality standards.",
+          title: "Host Recruitment & Training",
+          description: "Recruit, onboard, and train your initial hosts with proven processes. Monetization strategies and engagement optimization.",
         },
         {
-          title: "Client Acquisition",
-          description: "Launch marketing campaigns and leverage networks to secure your first clients and establish market presence.",
+          title: "Launch & Scale Worldwide",
+          description: "Launch marketing campaigns, leverage BD Official networks, and scale to worldwide hosting with our proven growth tactics.",
         },
       ]}
       caseStudies={[
         {
-          title: "Digital Marketing Agency - UAE",
-          description: "Built a full-service digital agency from scratch, including team hiring and client pipeline development.",
-          result: "Profitable within 4 months with 15 retainer clients",
+          title: "Live Streaming Agency - Hong Kong",
+          description: "Built a full-service Poppo Live and Bigo Live agency from scratch, including Super Admin setup and 50+ host recruitment.",
+          result: "Profitable within 4 months with $30K+ monthly revenue",
         },
         {
-          title: "Creative Studio - Pakistan",
-          description: "Transformed a solo freelancer into a thriving agency with specialized video production services.",
-          result: "Scaled to 8-person team and $50K monthly revenue",
+          title: "Entertainment Agency - Pakistan",
+          description: "Transformed a solo streamer into a thriving agency with specialized TikTok Live and Poppo Live operations.",
+          result: "Scaled to 100+ hosts and $50K monthly revenue",
         },
         {
-          title: "Live Streaming Agency - Malaysia",
-          description: "Established talent management agency for live streamers with comprehensive training programs.",
-          result: "Managing 100+ streamers across Southeast Asia",
+          title: "Talent Management Agency - Malaysia",
+          description: "Established talent management agency for live streamers with comprehensive training programs and coins system.",
+          result: "Managing 200+ streamers across Southeast Asia",
         },
       ]}
       faqs={[
         {
-          question: "How long does it take to set up an agency?",
-          answer: "A basic agency setup can be completed in 2-4 weeks. Full operational setup with team and initial clients typically takes 2-3 months.",
+          question: "How long does it take to set up a live streaming agency?",
+          answer: "A basic agency setup with Super Admin accounts can be completed in 2-4 weeks. Full operational setup with host recruitment and coins system typically takes 2-3 months.",
         },
         {
-          question: "Do I need prior business experience?",
-          answer: "No! Our comprehensive guidance covers everything from business basics to advanced strategies. We've helped first-time entrepreneurs build successful agencies.",
+          question: "Do I need prior experience to start a live streaming agency?",
+          answer: "No! Our comprehensive guidance covers everything from platform basics to advanced agency management strategies. We've helped first-time entrepreneurs build successful agencies managing 100+ hosts.",
         },
         {
-          question: "What ongoing support do you provide?",
-          answer: "We offer monthly consulting packages for continued guidance, quarterly strategy reviews, and access to our agency owner community for peer support.",
+          question: "Which platforms can I set up an agency for?",
+          answer: "We support agency setup for Poppo Live, Bigo Live, TikTok Live, Zero Live, Joyo Live, Buzzcast Live, and 10+ other platforms. Super Admin and BD Official training included.",
         },
         {
-          question: "Can you help with international agency setup?",
-          answer: "Absolutely! We have experience setting up agencies across multiple jurisdictions including UAE, UK, Singapore, and Pakistan with compliant legal structures.",
+          question: "What ongoing support do you provide for agency owners?",
+          answer: "We offer monthly consulting packages, Super Admin training, host management support, coins system optimization, and access to our worldwide agency owner network for peer support and collaboration.",
+        },
+        {
+          question: "Can you help with international agency expansion?",
+          answer: "Absolutely! As a Worldwide Hosting Provider and BD Official, we have experience expanding agencies across Hong Kong, Singapore, Malaysia, UAE, UK, and Pakistan with compliant operations.",
         },
       ]}
     />
