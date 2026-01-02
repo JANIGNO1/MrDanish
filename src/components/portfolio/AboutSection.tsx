@@ -36,17 +36,19 @@ const features = [
   { icon: Building, title: 'Agency', description: 'Management' },
 ];
 
+// E-E-A-T highlights with 2025 trending keywords
 const highlights = [
-  { icon: Award, text: '3+ years as Global Manager, Super Admin & Agency Owner' },
-  { icon: Globe, text: 'Trusted by Chinese firms, HK, Malaysia, Singapore live apps companies' },
-  { icon: TrendingUp, text: 'BD Official & Official Coins Seller for top world industries' },
-  { icon: Users, text: '150+ projects completed for 50+ global clients worldwide' },
+  { icon: Award, text: '3+ years as Global Manager, Super Admin & Agency Owner - Verified Experience' },
+  { icon: Globe, text: 'Trusted by Chinese firms, HK, Malaysia, Singapore live apps - International Authority' },
+  { icon: TrendingUp, text: 'BD Official & Official Coins Seller - AI-Powered Growth Strategies' },
+  { icon: Users, text: '150+ projects, 50+ global clients - Proven Expertise in Creator Economy' },
 ];
 
+// Timeline with E-E-A-T experience signals
 const timeline = [
-  { year: '2022', title: 'Started as Graphic Designer', desc: 'Began creative journey with logo & branding' },
-  { year: '2023', title: 'Expanded to Video & Web', desc: 'Added video editing & web development' },
-  { year: '2024', title: 'Global Manager & Agency Owner', desc: 'Leading teams & managing international partnerships' },
+  { year: '2022', title: 'Started as Graphic Designer & Video Editor', desc: 'Began creative journey with logo, branding & content creation' },
+  { year: '2023', title: 'Expanded to Web Dev & AI Tools', desc: 'Added React web development, SEO optimization & AI automation' },
+  { year: '2024-25', title: 'Global Manager & Agency Owner', desc: 'Leading remote teams, managing international live streaming partnerships' },
 ];
 
 const AboutSection = () => {
@@ -85,10 +87,10 @@ const AboutSection = () => {
             ABOUT MR DANISH
           </motion.span>
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-            #1 <span className="text-gradient text-glow">Top-Rated</span> Global Freelancer
+            #1 <span className="text-gradient text-glow">Top-Rated</span> Live Streaming Expert 2025
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Trusted by leading Chinese management firms, live apps companies in Hong Kong, Malaysia, Singapore, and top world industries including tech, fintech, and entertainment
+            Trusted by leading Chinese management firms, live apps companies in Hong Kong, Malaysia, Singapore, and global tech, fintech & entertainment industries. AI-powered digital growth specialist.
           </p>
         </motion.div>
 
@@ -197,20 +199,21 @@ const AboutSection = () => {
               </div>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
-                As a <span className="text-primary font-semibold">#1 top-rated global freelancer</span> with 3+ years experience, 
+                As the <span className="text-primary font-semibold">#1 top-rated global live streaming expert</span> with 3+ years verified experience, 
                 I've served as <span className="text-foreground font-medium">Global Manager, Super Admin, BD Official (Business Development), 
-                Official Coins Seller, Agency Owner, and Hosting Provider Worldwide</span>.
+                Official Coins Seller, Agency Owner, and Hosting Provider Worldwide</span>. Specializing in AI-powered digital growth strategies.
               </p>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Completed <span className="text-primary font-semibold">150+ projects</span> for <span className="text-primary font-semibold">50+ global clients</span>, 
                 including trusted partnerships with <span className="text-foreground font-medium">Chinese management firms, live apps companies 
-                in Hong Kong, Malaysia, and Singapore</span>, and top world live industries like tech, finance, and entertainment.
+                in Hong Kong, Malaysia, and Singapore</span>. Expert in TikTok, YouTube & Instagram growth algorithms for 2025.
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Passionate about <span className="text-foreground font-medium">innovation and excellence</span>. 
-                Whether you need branding, development, or global management expertise, I'm here to elevate your vision 🚀
+                Passionate about <span className="text-foreground font-medium">innovation, AI tools & automation</span>. 
+                Whether you need live streaming management, branding, development, or AI-powered digital marketing expertise, 
+                I'm your trusted remote work professional 🚀
               </p>
 
               {/* Highlights with Glow */}

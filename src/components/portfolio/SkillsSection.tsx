@@ -24,15 +24,16 @@ interface Skill {
   color: string;
 }
 
+// Skills with 2025 trending keywords & E-E-A-T signals
 const skills: Skill[] = [
-  { name: 'Business Development', level: 95, icon: TrendingUp, color: 'from-blue-500 to-cyan-500' },
-  { name: 'Agency Management', level: 90, icon: Building, color: 'from-purple-500 to-pink-500' },
-  { name: 'Adobe Illustrator', level: 95, icon: Palette, color: 'from-orange-500 to-orange-600' },
-  { name: 'Web Development', level: 90, icon: Code, color: 'from-cyan-400 to-blue-500' },
-  { name: 'Video Editing', level: 88, icon: Film, color: 'from-violet-500 to-purple-600' },
-  { name: 'Cryptocurrency Sales', level: 85, icon: Coins, color: 'from-yellow-500 to-orange-500' },
-  { name: 'Web Hosting', level: 90, icon: Server, color: 'from-green-500 to-emerald-500' },
-  { name: 'Team Leadership', level: 92, icon: Users, color: 'from-pink-500 to-rose-500' },
+  { name: 'Live Streaming Management', level: 98, icon: TrendingUp, color: 'from-blue-500 to-cyan-500' },
+  { name: 'Agency Management', level: 95, icon: Building, color: 'from-purple-500 to-pink-500' },
+  { name: 'AI Tools & Automation', level: 92, icon: Palette, color: 'from-orange-500 to-orange-600' },
+  { name: 'Web Development React', level: 90, icon: Code, color: 'from-cyan-400 to-blue-500' },
+  { name: 'Video Editing & Content', level: 88, icon: Film, color: 'from-violet-500 to-purple-600' },
+  { name: 'Digital Marketing SEO', level: 90, icon: Coins, color: 'from-yellow-500 to-orange-500' },
+  { name: 'Cloud Hosting Solutions', level: 90, icon: Server, color: 'from-green-500 to-emerald-500' },
+  { name: 'Remote Team Leadership', level: 95, icon: Users, color: 'from-pink-500 to-rose-500' },
 ];
 
 // Circular Progress Component
@@ -140,12 +141,12 @@ const SkillsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium mb-4 block text-sm uppercase tracking-wider">Expertise</span>
+          <span className="text-primary font-medium mb-4 block text-sm uppercase tracking-wider">Verified Expertise 2025</span>
           <h2 id="skills-heading" className="text-4xl md:text-5xl font-display font-bold mb-6">
-            My <span className="text-gradient">Skills</span>
+            My <span className="text-gradient">Professional Skills</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Proficient in industry-standard tools and technologies to deliver exceptional results
+            Proficient in industry-standard tools, AI automation & live streaming technologies to deliver exceptional results for global clients
           </p>
         </motion.div>
 
@@ -163,7 +164,7 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Additional Skills Banner */}
+        {/* Additional Skills Banner - 2025 Trending */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -171,9 +172,10 @@ const SkillsSection = () => {
           className="mt-16 glass-card p-6 rounded-2xl text-center"
         >
           <p className="text-muted-foreground">
-            <span className="text-foreground font-semibold">Also experienced with:</span>{' '}
-            Adobe Photoshop, After Effects, Filmora, PixelLab, AutoCAD, Maya, 3D Modeling, 
-            Google Analytics, Ahrefs, Mailchimp, and more...
+            <span className="text-foreground font-semibold">Also expert in 2025:</span>{' '}
+            Adobe Photoshop, After Effects, Premiere Pro, Filmora, PixelLab, Canva AI, ChatGPT Integration, 
+            No-Code Automation, Zapier, Make.com, Google Analytics 4, Ahrefs, SEMrush, 
+            TikTok Algorithm, YouTube Studio, Instagram Insights, and more...
           </p>
         </motion.div>
       </div>

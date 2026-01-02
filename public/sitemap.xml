@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Homepage - Danish Jani Portfolio -->
+  <url>
+    <loc>https://mrdanish.netlify.app/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://storage.googleapis.com/gpt-engineer-file-uploads/WZ1VEQZ3IsRrlIqVqjOCwuU9avE3/uploads/1766605075451-1760677457915.jpg</image:loc>
+      <image:title>Danish Jani - Global Live Streaming Expert</image:title>
+      <image:caption>Danish Jani - #1 Ranked Global Live Streaming Expert, Agency Owner, Super Admin</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Live Apps Section -->
+  <url>
+    <loc>https://mrdanish.netlify.app/#live-apps</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Services Section -->
+  <url>
+    <loc>https://mrdanish.netlify.app/#services</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Live Streaming Management Service -->
+  <url>
+    <loc>https://mrdanish.netlify.app/services/live-streaming-management</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Agency Setup Service -->
+  <url>
+    <loc>https://mrdanish.netlify.app/services/agency-setup</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Coins Selling Service -->
+  <url>
+    <loc>https://mrdanish.netlify.app/services/coins-selling</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Worldwide Hosting Service -->
+  <url>
+    <loc>https://mrdanish.netlify.app/services/hosting-worldwide</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Graphic Design Service -->
+  <url>
+    <loc>https://mrdanish.netlify.app/services/graphic-design</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Video Editing Service -->
+  <url>
+    <loc>https://mrdanish.netlify.app/services/video-editing</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Web Development Service -->
+  <url>
+    <loc>https://mrdanish.netlify.app/services/web-development</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Digital Marketing Service -->
+  <url>
+    <loc>https://mrdanish.netlify.app/services/digital-marketing</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- SEO Optimization Service -->
+  <url>
+    <loc>https://mrdanish.netlify.app/services/seo-optimization</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Social Media Management Service -->
+  <url>
+    <loc>https://mrdanish.netlify.app/services/social-media-management</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Portfolio Section -->
+  <url>
+    <loc>https://mrdanish.netlify.app/#portfolio</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://mrdanish.netlify.app/#about</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Skills Section -->
+  <url>
+    <loc>https://mrdanish.netlify.app/#skills</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Testimonials Section -->
+  <url>
+    <loc>https://mrdanish.netlify.app/#testimonials</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://mrdanish.netlify.app/#contact</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

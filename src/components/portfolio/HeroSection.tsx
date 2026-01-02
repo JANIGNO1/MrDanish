@@ -50,14 +50,14 @@ const FloatingParticles = () => {
   );
 };
 
-// Roles/titles with expanded global roles
+// Roles/titles with 2025 trending keywords - E-E-A-T optimized
 const roles = [
-  '#1 Global Freelancer',
-  'Creative Professional',
-  'Global Manager',
-  'Agency Owner',
-  'BD Official',
-  'Web Developer',
+  '#1 Live Streaming Expert',
+  'AI-Powered Digital Growth',
+  'Global Agency Owner',
+  'Super Admin Worldwide',
+  'Remote Work Freelancer',
+  'Content Creator 2025',
 ];
 
 // Social links with glow effect
@@ -155,9 +155,10 @@ const HeroSection = () => {
               >
                 <img 
                   src={profileMain} 
-                  alt="Danish Jani - #1 Top-Rated Global Freelancer"
+                  alt="Danish Jani - #1 Global Live Streaming Expert 2025, Agency Owner, Super Admin | Trusted by Hong Kong, Malaysia, Singapore"
                   className="w-full h-full object-cover object-top"
                   loading="eager"
+                  title="Danish Jani - Top-Rated Remote Work Freelancer & AI-Powered Digital Growth Expert"
                 />
               </motion.div>
               
@@ -236,7 +237,7 @@ const HeroSection = () => {
                   <Sparkles className="w-4 h-4 text-primary" aria-hidden="true" />
                 </motion.div>
                 <span className="text-sm font-medium text-foreground">
-                  🏆 #1 Worldwide Top Rated • Available 24/7
+                  🏆 #1 Worldwide Live Streaming Expert 2025 • Available 24/7
                 </span>
               </motion.div>
 
@@ -271,16 +272,16 @@ const HeroSection = () => {
                 </div>
               </motion.div>
 
-              {/* Tagline */}
+              {/* Tagline - 2025 Trending Keywords */}
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
               >
-                Super Admin • BD Official • Coins Seller • Agency Owner
+                Super Admin • BD Official • Coins Seller • Agency Owner • AI Tools Expert
                 <br />
-                <span className="text-foreground font-medium">Trusted by Hong Kong, Malaysia, Singapore & Global Industries</span>
+                <span className="text-foreground font-medium">Trusted by Hong Kong, Malaysia, Singapore & Global Live Streaming Industries</span>
               </motion.p>
 
               {/* CTA Buttons with Enhanced Glow */}
