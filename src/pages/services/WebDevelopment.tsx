@@ -9,6 +9,22 @@ const WebDevelopment = () => {
       description="Build stunning, high-performance websites and web applications with cutting-edge technologies. From landing pages to complex web apps, we deliver solutions that drive results."
       icon={<Globe className="w-10 h-10 text-white" />}
       gradient="from-cyan-500 to-teal-600"
+      metaTitle="Professional Web Development Services 2025 | React, Next.js & Custom Websites"
+      metaDescription="Expert web development using React, Next.js & TypeScript. Build fast, SEO-optimized, responsive websites & web apps. Full-stack development with modern tech stack."
+      keywords={[
+        "web development services 2025",
+        "React developer",
+        "Next.js development",
+        "custom website development",
+        "full-stack developer",
+        "responsive web design",
+        "ecommerce website development",
+        "SaaS development",
+        "web app development",
+        "TypeScript developer",
+        "website developer Pakistan",
+        "frontend development",
+      ]}
       benefits={[
         "Responsive design that works perfectly on all devices",
         "Modern tech stack (React, Next.js, TypeScript, Tailwind)",
@@ -54,20 +70,24 @@ const WebDevelopment = () => {
       ]}
       faqs={[
         {
-          question: "What technologies do you use?",
-          answer: "We specialize in React, Next.js, TypeScript, and Tailwind CSS for frontend. For backend, we use Node.js, Supabase, and various cloud services depending on project needs.",
+          question: "What technologies do you use for web development in 2025?",
+          answer: "We specialize in React, Next.js, TypeScript, and Tailwind CSS for frontend. For backend, we use Node.js, Supabase, and cloud services. These modern technologies ensure fast, scalable, and maintainable websites.",
         },
         {
-          question: "Do you provide hosting and maintenance?",
-          answer: "Yes! We offer hosting solutions and monthly maintenance packages that include updates, backups, security monitoring, and performance optimization.",
+          question: "How much does custom website development cost?",
+          answer: "Costs vary based on complexity. Landing pages start affordably, business websites are mid-range, and web applications are quoted based on features. We provide detailed estimates after understanding your requirements.",
+        },
+        {
+          question: "Do you build e-commerce websites?",
+          answer: "Yes! We develop custom e-commerce solutions with Shopify, WooCommerce, or fully custom builds. Features include payment integration, inventory management, and conversion optimization.",
         },
         {
           question: "How long does website development take?",
-          answer: "Timeline varies by complexity. Landing pages: 1-2 weeks. Business websites: 3-4 weeks. Web applications: 6-12 weeks. We provide detailed timelines after scoping.",
+          answer: "Timeline varies by complexity. Landing pages: 1-2 weeks. Business websites: 3-4 weeks. Web applications: 6-12 weeks. We provide detailed timelines after project scoping.",
         },
         {
-          question: "Will I be able to update content myself?",
-          answer: "Absolutely! We integrate user-friendly CMS solutions and provide training so you can easily manage your content without technical knowledge.",
+          question: "Do you provide website maintenance and hosting?",
+          answer: "Yes! We offer hosting solutions and monthly maintenance packages including updates, backups, security monitoring, performance optimization, and technical support.",
         },
       ]}
     />

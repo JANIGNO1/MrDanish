@@ -9,6 +9,22 @@ const VideoEditing = () => {
       description="Transform raw footage into compelling stories with professional video editing. From YouTube content to promotional videos, we create engaging visual content that captures attention."
       icon={<Film className="w-10 h-10 text-white" />}
       gradient="from-pink-500 to-rose-600"
+      metaTitle="Professional Video Editing Services 2025 | YouTube, TikTok & Reels Editor"
+      metaDescription="Expert video editing for YouTube, TikTok, Instagram Reels & promotional content. Professional color grading, motion graphics, sound design & fast turnaround."
+      keywords={[
+        "video editing services",
+        "professional video editor 2025",
+        "YouTube video editing",
+        "TikTok video editor",
+        "Instagram Reels editing",
+        "promotional video production",
+        "motion graphics",
+        "color grading services",
+        "video editing Pakistan",
+        "cinematic video editing",
+        "content creator editor",
+        "short-form video editing",
+      ]}
       benefits={[
         "Professional editing with Adobe Premiere Pro & After Effects",
         "Custom motion graphics and animated titles",
@@ -54,20 +70,24 @@ const VideoEditing = () => {
       ]}
       faqs={[
         {
-          question: "What video formats do you accept?",
-          answer: "We accept all major formats including MP4, MOV, AVI, and raw camera files (RED, BRAW, ProRes). Cloud upload links work best for large files.",
+          question: "What's the best video editing service for YouTubers in 2025?",
+          answer: "Our video editing service is tailored for content creators. We handle everything from raw footage to final upload-ready files with custom thumbnails, optimized for YouTube's algorithm.",
         },
         {
-          question: "How long does editing take?",
-          answer: "Turnaround depends on video length and complexity. Short social content: 1-2 days. YouTube videos: 3-5 days. Commercials/promos: 1-2 weeks.",
+          question: "How much does professional video editing cost?",
+          answer: "Pricing varies by video length and complexity. Short-form content (TikTok/Reels) starts affordably, while longer YouTube videos and commercials are quoted based on requirements.",
         },
         {
-          question: "Do you provide music and sound effects?",
-          answer: "Yes! We have access to licensed music libraries and sound effect collections. Custom music composition is available for premium projects.",
+          question: "Do you edit TikTok and Instagram Reels content?",
+          answer: "Yes! We specialize in short-form vertical content with trending transitions, effects, and captions optimized for maximum engagement on TikTok and Instagram Reels.",
         },
         {
-          question: "Can you edit content in languages other than English?",
-          answer: "Absolutely! We've edited content in 10+ languages and can add subtitles/captions in any language you need.",
+          question: "What video formats do you accept and deliver?",
+          answer: "We accept all major formats including MP4, MOV, AVI, and raw camera files (RED, BRAW, ProRes). Delivery includes optimized exports for each platform you need.",
+        },
+        {
+          question: "How fast can you edit my video?",
+          answer: "Turnaround depends on complexity. Short social content: 1-2 days. YouTube videos: 3-5 days. Commercials/promos: 1-2 weeks. Rush delivery available.",
         },
       ]}
     />

@@ -9,6 +9,22 @@ const SocialMediaManagement = () => {
       description="Strategic social media management that builds engaged communities and drives real business results. From content creation to analytics, we handle your complete social presence."
       icon={<Share2 className="w-10 h-10 text-white" />}
       gradient="from-pink-500 to-orange-500"
+      metaTitle="Social Media Management Services 2025 | Instagram, TikTok & LinkedIn Growth"
+      metaDescription="Grow your social media presence with expert management. Content creation, community engagement, analytics & paid ads for Instagram, TikTok, LinkedIn & more."
+      keywords={[
+        "social media management 2025",
+        "Instagram growth services",
+        "TikTok marketing",
+        "LinkedIn management",
+        "social media content creation",
+        "community management",
+        "social media marketing agency",
+        "influencer marketing",
+        "social media strategy",
+        "social media manager Pakistan",
+        "content calendar creation",
+        "social media analytics",
+      ]}
       benefits={[
         "Custom content calendars tailored to your brand voice",
         "Engaging content creation (graphics, videos, captions)",
@@ -54,20 +70,24 @@ const SocialMediaManagement = () => {
       ]}
       faqs={[
         {
-          question: "Which social platforms do you manage?",
-          answer: "We manage all major platforms including Instagram, TikTok, LinkedIn, X (Twitter), Facebook, Pinterest, and YouTube. We recommend platforms based on your target audience.",
+          question: "Which social media platforms should my business use in 2025?",
+          answer: "Platform selection depends on your audience. Instagram and TikTok are ideal for B2C, LinkedIn for B2B, and X (Twitter) for thought leadership. We analyze your audience and recommend the optimal platform mix.",
         },
         {
-          question: "How often will you post?",
-          answer: "Posting frequency depends on your package and platform. Typically 5-7 posts per week on primary platforms, with stories and engagement activities daily.",
+          question: "How often should I post on social media?",
+          answer: "Posting frequency varies by platform and goals. Typically 5-7 posts per week on primary platforms, with daily Stories and engagement activities. Quality and consistency matter more than volume.",
         },
         {
-          question: "Do you handle paid advertising?",
-          answer: "Yes! We offer social media advertising management including strategy, ad creation, targeting, and optimization. Ad spend is separate from management fees.",
+          question: "Do you handle social media advertising?",
+          answer: "Yes! We offer comprehensive social media advertising management including strategy, ad creation, targeting, and optimization across Facebook, Instagram, TikTok, LinkedIn, and more. Ad spend is separate from management fees.",
         },
         {
-          question: "How do you measure success?",
-          answer: "We track KPIs including follower growth, engagement rate, reach, website traffic, and conversions. Monthly reports show progress and insights for strategy refinement.",
+          question: "How do you measure social media success?",
+          answer: "We track KPIs including follower growth, engagement rate, reach, impressions, website traffic, and conversions. Monthly reports show progress with insights and recommendations for strategy refinement.",
+        },
+        {
+          question: "Can you help grow my TikTok and Instagram Reels?",
+          answer: "Absolutely! We specialize in short-form video strategy with trending content formats, hashtag optimization, and engagement tactics specifically designed to boost visibility on TikTok and Instagram Reels.",
         },
       ]}
     />
