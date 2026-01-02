@@ -3,41 +3,42 @@ import { Globe, Shield, TrendingUp, Coins, Building2, Server } from "lucide-reac
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
+// E-E-A-T Authority Roles with 2025 Trending Keywords
 const roles = [
   {
     icon: Globe,
     title: "Global Manager",
-    description: "Leading international teams & operations",
+    description: "Leading international live streaming teams & operations worldwide",
     gradient: "from-blue-500 to-cyan-400",
   },
   {
     icon: Shield,
     title: "Super Admin",
-    description: "Full platform control & oversight",
+    description: "Full platform control on Poppo Live, Bigo Live, TikTok Live & 10+ apps",
     gradient: "from-purple-500 to-pink-400",
   },
   {
     icon: TrendingUp,
     title: "BD Official",
-    description: "Strategic business development",
+    description: "Strategic business development & AI-powered growth strategies",
     gradient: "from-green-500 to-emerald-400",
   },
   {
     icon: Coins,
     title: "Official Coins Seller",
-    description: "Authorized digital currency expert",
+    description: "Authorized digital currency & virtual gifts expert since 2022",
     gradient: "from-yellow-500 to-orange-400",
   },
   {
     icon: Building2,
     title: "Agency Owner",
-    description: "Running successful creative agencies",
+    description: "Running successful live streaming & creative agencies globally",
     gradient: "from-rose-500 to-red-400",
   },
   {
     icon: Server,
     title: "Worldwide Hosting Provider",
-    description: "Global server & hosting solutions",
+    description: "Global server & hosting solutions for live streamers & creators",
     gradient: "from-indigo-500 to-violet-400",
   },
 ];
@@ -164,18 +165,18 @@ const AuthoritySection = () => {
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            ✨ Professional Authority
+            ✨ Verified Professional Authority 2025
           </motion.span>
           
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
             <span className="text-foreground">My </span>
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              Elite Roles
+              Elite Global Roles
             </span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Trusted authority across multiple industries with executive-level positions worldwide
+            Trusted authority across live streaming, AI tools & digital marketing industries with executive-level positions in Hong Kong, Malaysia, Singapore & worldwide
           </p>
         </motion.div>
 
