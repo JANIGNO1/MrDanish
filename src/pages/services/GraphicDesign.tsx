@@ -9,6 +9,22 @@ const GraphicDesign = () => {
       description="Premium graphic design services that transform ideas into stunning visuals. From logo design to complete brand identities, we create memorable designs that captivate audiences."
       icon={<Palette className="w-10 h-10 text-white" />}
       gradient="from-violet-500 to-purple-600"
+      metaTitle="Professional Graphic Design & Branding Services 2025 | Logo Design Expert"
+      metaDescription="Get stunning logo design, brand identity kits & social media graphics. Premium graphic design services with unlimited revisions, fast delivery & source files included."
+      keywords={[
+        "graphic design services",
+        "logo design 2025",
+        "brand identity design",
+        "professional branding",
+        "social media graphics",
+        "visual identity designer",
+        "custom logo design",
+        "branding agency Pakistan",
+        "graphic designer UAE",
+        "creative design studio",
+        "brand guidelines design",
+        "modern logo design",
+      ]}
       benefits={[
         "Custom logo design with unlimited revisions until perfection",
         "Complete brand identity kits (logo, colors, typography, guidelines)",
@@ -54,20 +70,24 @@ const GraphicDesign = () => {
       ]}
       faqs={[
         {
-          question: "How many logo concepts will I receive?",
-          answer: "Depending on your package, you'll receive 3-5 unique logo concepts. Each concept comes with color variations and application previews.",
+          question: "How much does professional logo design cost in 2025?",
+          answer: "Our logo design packages start from affordable rates with multiple concepts included. Each package offers 3-5 unique logo concepts with color variations and application previews.",
         },
         {
-          question: "What file formats do you provide?",
-          answer: "All projects include AI (editable vector), PSD, PNG (transparent), JPG, PDF, and SVG files. We ensure you have everything needed for print and digital use.",
+          question: "What file formats do you provide for graphic design?",
+          answer: "All projects include AI (editable vector), PSD, PNG (transparent), JPG, PDF, and SVG files. We ensure you have everything needed for both print and digital use.",
         },
         {
-          question: "How many revisions are included?",
-          answer: "We offer unlimited revisions within the project scope. Your satisfaction is our priority - we work until you're 100% happy with the design.",
+          question: "How many logo revisions are included in your packages?",
+          answer: "We offer unlimited revisions within the project scope. Your satisfaction is our priority - we work until you're 100% happy with the final design.",
         },
         {
-          question: "Can you match my existing brand style?",
-          answer: "Absolutely! We can work within existing brand guidelines or help evolve your brand while maintaining recognizable elements.",
+          question: "Can you create a complete brand identity kit?",
+          answer: "Yes! Our brand identity packages include logo, color palette, typography, brand guidelines, business cards, letterhead, social media templates, and more.",
+        },
+        {
+          question: "What's your turnaround time for graphic design projects?",
+          answer: "Standard turnaround is 3-5 business days for logo design. We also offer express 24-48 hour delivery options for urgent projects at premium rates.",
         },
       ]}
     />
