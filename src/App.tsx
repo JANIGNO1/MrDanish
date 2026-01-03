@@ -18,6 +18,11 @@ import SocialMediaManagement from "./pages/services/SocialMediaManagement";
 import SEOOptimization from "./pages/services/SEOOptimization";
 import DigitalMarketing from "./pages/services/DigitalMarketing";
 
+// Legal Pages (Required for AdSense)
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import Disclaimer from "./pages/Disclaimer";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -40,6 +45,11 @@ const App = () => (
           <Route path="/services/social-media-management" element={<SocialMediaManagement />} />
           <Route path="/services/seo-optimization" element={<SEOOptimization />} />
           <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
+          
+          {/* Legal Pages - Required for AdSense Approval */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

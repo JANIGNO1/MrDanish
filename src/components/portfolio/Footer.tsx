@@ -98,6 +98,13 @@ const Footer = () => {
           <a href="https://pro.fiverr.com/s/LdX009A" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors text-sm">Fiverr</a>
           <a href="https://www.upwork.com/freelancers/~01c99e84c6a4eb52e2" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors text-sm">Upwork</a>
         </div>
+
+        {/* Legal Links - Required for AdSense */}
+        <div className="flex flex-wrap justify-center gap-6 mt-6 pt-6 border-t border-border/20">
+          <a href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors text-xs">Privacy Policy</a>
+          <a href="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors text-xs">Terms of Service</a>
+          <a href="/disclaimer" className="text-muted-foreground hover:text-primary transition-colors text-xs">Disclaimer</a>
+        </div>
       </div>
     </footer>
   );
