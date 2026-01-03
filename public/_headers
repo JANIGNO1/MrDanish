@@ -1,0 +1,57 @@
+# Netlify Headers Configuration for mrdanish.netlify.app
+# Optimized for Core Web Vitals & SEO
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Cache static assets for 1 year
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images for 1 year
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache fonts for 1 year
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache JS and CSS for 1 year (versioned)
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML - short cache for fresh content
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Sitemap and robots
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/xml
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain
+
+# Google verification file
+/google8437b446ce40ef17.html
+  Cache-Control: public, max-age=86400

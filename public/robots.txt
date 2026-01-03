@@ -1,6 +1,8 @@
-# Robots.txt for mrdanish.netlify.app
-# Danish Jani - #1 Global Live Streaming Expert & Agency Owner
+# robots.txt for https://mrdanish.netlify.app/
+# Mr Danish - #1 Global Live Streaming Expert 2025
+# Last Updated: 2025-01-03 - Monetization & Verification Ready
 
+# Google Crawlers - Priority
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -11,16 +13,41 @@ Allow: /
 User-agent: Googlebot-News
 Allow: /
 
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+# Bing & Microsoft
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
+User-agent: msnbot
+Allow: /
+
+# Yahoo
 User-agent: Slurp
 Allow: /
 
+# DuckDuckGo
 User-agent: DuckDuckBot
 Allow: /
 
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# Social Media Crawlers
 User-agent: Twitterbot
 Allow: /
 
@@ -39,12 +66,13 @@ Allow: /
 User-agent: TelegramBot
 Allow: /
 
+# All other bots
 User-agent: *
 Allow: /
 Crawl-delay: 2
 
-# Sitemap
+# Sitemap location (required for indexing)
 Sitemap: https://mrdanish.netlify.app/sitemap.xml
 
-# Host
+# Host directive
 Host: https://mrdanish.netlify.app
