@@ -327,20 +327,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Trusted By Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-        className="absolute bottom-24 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4"
-      >
-        <div className="flex items-center justify-center gap-3 p-4 glass-card rounded-2xl">
-          <Globe className="w-5 h-5 text-primary flex-shrink-0" />
-          <span className="text-sm md:text-base font-medium text-foreground text-center">
-            Trusted by Hong Kong, Malaysia, Singapore & Global Live Streaming Industries
-          </span>
-        </div>
-      </motion.div>
 
       {/* Scroll Indicator with Glow */}
       <motion.div
