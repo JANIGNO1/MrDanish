@@ -4,7 +4,6 @@ import HeroSection from '@/components/portfolio/HeroSection';
 import ClientLogosMarquee from '@/components/portfolio/ClientLogosMarquee';
 import AuthoritySection from '@/components/portfolio/AuthoritySection';
 import AboutSection from '@/components/portfolio/AboutSection';
-import JourneySection from '@/components/portfolio/JourneySection';
 import SkillsSection from '@/components/portfolio/SkillsSection';
 import ServicesSection from '@/components/portfolio/ServicesSection';
 import PortfolioSection from '@/components/portfolio/PortfolioSection';
@@ -29,7 +28,6 @@ const Index = () => {
         <AuthoritySection />
         <RankingCTA />
         <AboutSection />
-        <JourneySection />
         <SkillsSection />
         <ServicesSection />
         <LiveAppsSection />
