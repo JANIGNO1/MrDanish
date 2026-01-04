@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Navbar from '@/components/portfolio/Navbar';
 import HeroSection from '@/components/portfolio/HeroSection';
+import ClientLogosMarquee from '@/components/portfolio/ClientLogosMarquee';
 import AuthoritySection from '@/components/portfolio/AuthoritySection';
 import AboutSection from '@/components/portfolio/AboutSection';
 import SkillsSection from '@/components/portfolio/SkillsSection';
@@ -12,7 +13,6 @@ import ContactSection from '@/components/portfolio/ContactSection';
 import Footer from '@/components/portfolio/Footer';
 import RankingCTA from '@/components/portfolio/RankingCTA';
 import LiveAppsSection from '@/components/portfolio/LiveAppsSection';
-
 const Index = () => {
   useEffect(() => {
     // Initialize dark mode
@@ -24,6 +24,7 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <ClientLogosMarquee />
         <AuthoritySection />
         <RankingCTA />
         <AboutSection />
