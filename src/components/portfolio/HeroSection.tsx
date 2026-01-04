@@ -273,16 +273,6 @@ const HeroSection = () => {
               </motion.div>
 
               {/* Tagline - 2025 Trending Keywords */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
-              >
-                Super Admin • BD Official • Coins Seller • Agency Owner • AI Tools Expert
-                <br />
-                <span className="text-foreground font-medium">Trusted by Hong Kong, Malaysia, Singapore & Global Live Streaming Industries</span>
-              </motion.p>
 
               {/* CTA Buttons with Enhanced Glow */}
               <motion.div
@@ -304,15 +294,6 @@ const HeroSection = () => {
                 </motion.button>
                 
                 {/* Secondary CTA */}
-                <motion.a
-                  href="#portfolio"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="btn-secondary px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-3"
-                >
-                  <Play className="w-5 h-5 text-primary" aria-hidden="true" />
-                  <span>View Portfolio</span>
-                </motion.a>
               </motion.div>
 
               {/* Quick Stats with Glow */}
@@ -345,6 +326,21 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Trusted By Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="absolute bottom-24 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4"
+      >
+        <div className="flex items-center justify-center gap-3 p-4 glass-card rounded-2xl">
+          <Globe className="w-5 h-5 text-primary flex-shrink-0" />
+          <span className="text-sm md:text-base font-medium text-foreground text-center">
+            Trusted by Hong Kong, Malaysia, Singapore & Global Live Streaming Industries
+          </span>
+        </div>
+      </motion.div>
 
       {/* Scroll Indicator with Glow */}
       <motion.div
