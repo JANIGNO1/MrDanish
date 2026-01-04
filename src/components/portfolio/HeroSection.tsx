@@ -296,12 +296,49 @@ const HeroSection = () => {
                 {/* Secondary CTA */}
               </motion.div>
 
+              {/* Social Proof Badges */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.55 }}
+                className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-6"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30"
+                >
+                  <Award className="w-4 h-4 text-yellow-500" />
+                  <span className="text-xs font-semibold text-yellow-500">Top Rated</span>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30"
+                >
+                  <Star className="w-4 h-4 text-green-500 fill-green-500" />
+                  <span className="text-xs font-semibold text-green-500">Verified Pro</span>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30"
+                >
+                  <Crown className="w-4 h-4 text-blue-500" />
+                  <span className="text-xs font-semibold text-blue-500">Level 2 Seller</span>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30"
+                >
+                  <Zap className="w-4 h-4 text-purple-500" />
+                  <span className="text-xs font-semibold text-purple-500">Fast Delivery</span>
+                </motion.div>
+              </motion.div>
+
               {/* Quick Stats with Glow */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
-                className="grid grid-cols-3 gap-4 mt-12 max-w-lg mx-auto lg:mx-0"
+                className="grid grid-cols-3 gap-4 mt-8 max-w-lg mx-auto lg:mx-0"
               >
                 {[
                   { icon: Briefcase, value: '150+', label: 'Projects' },
