@@ -44,11 +44,38 @@ const highlights = [
   { icon: Users, text: '150+ projects, 50+ global clients - Proven Expertise in Creator Economy' },
 ];
 
-// Timeline with E-E-A-T experience signals
+// Professional Timeline Milestones
 const timeline = [
-  { year: '2022', title: 'Started as Graphic Designer & Video Editor', desc: 'Began creative journey with logo, branding & content creation' },
-  { year: '2023', title: 'Expanded to Web Dev & AI Tools', desc: 'Added React web development, SEO optimization & AI automation' },
-  { year: '2024-25', title: 'Global Manager & Agency Owner', desc: 'Leading remote teams, managing international live streaming partnerships' },
+  { 
+    year: '2017', 
+    icon: '📱', 
+    title: 'Exploration Phase', 
+    desc: 'Started exploring social and messaging apps like IMO, Facebook Messenger, Instagram – discovering online communication and content creation.' 
+  },
+  { 
+    year: '2020', 
+    icon: '🎤', 
+    title: 'Live Streaming Entry', 
+    desc: 'Became a host on Likee app, gaining first experience in live streaming and audience engagement.' 
+  },
+  { 
+    year: '2020 – 2021', 
+    icon: '🚀', 
+    title: 'Short Video & Live Systems', 
+    desc: 'Joined as host on Snack Video, learning more about short videos and live systems.' 
+  },
+  { 
+    year: '2021 – 2022', 
+    icon: '📊', 
+    title: 'Algorithm & Growth Mastery', 
+    desc: 'TikTok launched in Pakistan – explored deeply, understood algorithms, content strategies, and live features.' 
+  },
+  { 
+    year: '2022 – Present', 
+    icon: '💼', 
+    title: 'Agency & Leadership', 
+    desc: 'Used all knowledge to start my own live streaming agency. Recruited and managed hosts, built teams, specialized in platforms like Poppo Live, Bigo Live, Tango. Delivered 150+ projects for international clients in branding, web development, and video editing for live apps.' 
+  },
 ];
 
 const AboutSection = () => {
@@ -257,65 +284,84 @@ const AboutSection = () => {
             </div>
           </motion.div>
 
-          {/* Right Side - Timeline */}
+          {/* Right Side - Professional Timeline */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="glass p-8 rounded-3xl card-glow">
-              <div className="flex items-center gap-4 mb-8">
+            <div className="relative p-8 rounded-3xl bg-gradient-to-br from-sky-50/80 via-white/90 to-emerald-50/80 dark:from-sky-950/40 dark:via-background/80 dark:to-emerald-950/40 border border-sky-200/50 dark:border-sky-800/30 shadow-xl">
+              {/* Decorative glow */}
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-sky-400/20 to-emerald-400/20 rounded-full blur-3xl" />
+              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-emerald-400/20 to-sky-400/20 rounded-full blur-3xl" />
+              
+              <div className="flex items-center gap-4 mb-8 relative z-10">
                 <motion.div 
-                  className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center"
-                  animate={{ boxShadow: ['0 0 20px hsl(220 80% 55% / 0.3)', '0 0 30px hsl(220 80% 55% / 0.5)', '0 0 20px hsl(220 80% 55% / 0.3)'] }}
-                  transition={{ duration: 2, repeat: Infinity }}
+                  className="w-16 h-16 bg-gradient-to-br from-sky-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg"
+                  animate={{ boxShadow: ['0 0 20px hsl(180 60% 50% / 0.3)', '0 0 35px hsl(180 60% 50% / 0.5)', '0 0 20px hsl(180 60% 50% / 0.3)'] }}
+                  transition={{ duration: 2.5, repeat: Infinity }}
                 >
                   <Target className="w-8 h-8 text-white" />
                 </motion.div>
                 <div>
-                  <h3 className="text-2xl font-display font-bold">My Timeline</h3>
-                  <p className="text-muted-foreground">Growth & Experience</p>
+                  <h3 className="text-2xl font-display font-bold bg-gradient-to-r from-sky-600 to-emerald-600 dark:from-sky-400 dark:to-emerald-400 bg-clip-text text-transparent">My Professional Timeline</h3>
+                  <p className="text-muted-foreground">From Explorer to Agency Owner</p>
                 </div>
               </div>
 
-              {/* Timeline */}
-              <div className="space-y-6">
+              {/* Timeline Cards */}
+              <div className="relative space-y-4 z-10">
+                {/* Vertical line */}
+                <div className="absolute left-[27px] top-4 bottom-4 w-0.5 bg-gradient-to-b from-sky-400 via-emerald-400 to-sky-400 dark:from-sky-500 dark:via-emerald-500 dark:to-sky-500" />
+                
                 {timeline.map((item, index) => (
                   <motion.div
                     key={item.year}
-                    initial={{ opacity: 0, x: 20 }}
+                    initial={{ opacity: 0, x: 30 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ delay: 0.7 + index * 0.15 }}
-                    className="relative pl-8 border-l-2 border-primary/30 pb-6 last:pb-0"
+                    transition={{ delay: 0.7 + index * 0.12 }}
+                    whileHover={{ scale: 1.02, x: 5 }}
+                    className="relative pl-16 group cursor-default"
                   >
-                    {/* Timeline Dot with Glow */}
+                    {/* Timeline Icon Circle */}
                     <motion.div 
-                      className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary"
-                      animate={{ boxShadow: ['0 0 10px hsl(220 80% 55% / 0.5)', '0 0 20px hsl(220 80% 55% / 0.8)', '0 0 10px hsl(220 80% 55% / 0.5)'] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
-                    />
+                      className="absolute left-0 top-3 w-14 h-14 rounded-full bg-gradient-to-br from-sky-100 to-emerald-100 dark:from-sky-900/60 dark:to-emerald-900/60 border-2 border-sky-300 dark:border-sky-600 flex items-center justify-center text-2xl shadow-md group-hover:shadow-lg group-hover:border-emerald-400 transition-all duration-300"
+                      whileHover={{ 
+                        scale: 1.1,
+                        boxShadow: '0 0 25px hsl(170 60% 50% / 0.5)' 
+                      }}
+                    >
+                      {item.icon}
+                    </motion.div>
                     
-                    <span className="text-primary font-bold text-lg">{item.year}</span>
-                    <h4 className="font-display font-bold text-foreground mt-1">{item.title}</h4>
-                    <p className="text-muted-foreground text-sm mt-1">{item.desc}</p>
+                    {/* Card */}
+                    <div className="p-5 rounded-2xl bg-white/80 dark:bg-background/60 border border-sky-200/60 dark:border-sky-800/40 shadow-md hover:shadow-xl hover:border-emerald-300 dark:hover:border-emerald-600 transition-all duration-300 backdrop-blur-sm">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="px-3 py-1 rounded-full text-sm font-bold bg-gradient-to-r from-sky-500 to-emerald-500 text-white shadow-sm">
+                          {item.year}
+                        </span>
+                      </div>
+                      <h4 className="font-display font-bold text-lg text-foreground mb-2 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                        {item.title}
+                      </h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
 
-              {/* Additional Info */}
+              {/* Closing Highlight */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 1.2 }}
-                className="mt-8 p-4 rounded-2xl border border-primary/30 bg-primary/5"
+                transition={{ delay: 1.4 }}
+                className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-sky-100/80 to-emerald-100/80 dark:from-sky-900/40 dark:to-emerald-900/40 border border-sky-300/50 dark:border-sky-700/50 text-center relative z-10"
               >
-                <div className="flex items-center gap-3">
-                  <Zap className="w-5 h-5 text-primary" />
-                  <span className="text-sm">
-                    <span className="text-foreground font-medium">Serving:</span>{' '}
-                    <span className="text-muted-foreground">China, Hong Kong, Malaysia, Singapore & Global Industries</span>
-                  </span>
-                </div>
+                <p className="text-lg md:text-xl font-semibold bg-gradient-to-r from-sky-600 via-emerald-500 to-sky-600 dark:from-sky-400 dark:via-emerald-400 dark:to-sky-400 bg-clip-text text-transparent leading-relaxed">
+                  "From explorer to agency owner – building the future of live streaming in Pakistan and worldwide. Insha'Allah top 1 soon! 🔥"
+                </p>
               </motion.div>
             </div>
           </motion.div>
