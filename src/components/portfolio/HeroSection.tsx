@@ -274,26 +274,13 @@ const HeroSection = () => {
 
               {/* Tagline - 2025 Trending Keywords */}
 
-              {/* CTA Section with Photo */}
+              {/* CTA Buttons with Enhanced Glow */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="flex flex-col items-center lg:items-start gap-4"
+                className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
               >
-                {/* Small Profile Photo above CTA */}
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-primary/50"
-                  style={{ boxShadow: '0 0 20px hsl(220 80% 55% / 0.4)' }}
-                >
-                  <img 
-                    src={profileMain} 
-                    alt="Danish Jani"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </motion.div>
-
                 {/* Primary CTA */}
                 <motion.button
                   onClick={scrollToContact}
@@ -305,6 +292,8 @@ const HeroSection = () => {
                   <span>Hire Me Now</span>
                   <ArrowDown className="w-5 h-5" />
                 </motion.button>
+                
+                {/* Secondary CTA */}
               </motion.div>
 
               {/* Social Proof Badges */}
