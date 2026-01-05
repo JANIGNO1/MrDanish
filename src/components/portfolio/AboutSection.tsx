@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Code2, Palette, Video, Zap, Heart, Target, Award, Users, Globe, Building, ChevronLeft, ChevronRight, Briefcase, TrendingUp } from 'lucide-react';
+import { Code2, Palette, Video, Zap, Heart, Target, Award, Users, Globe, Building, ChevronLeft, ChevronRight, Briefcase, TrendingUp, Sparkles, Rocket, Brain, Cpu, MessageSquare, Lightbulb, Star, CheckCircle2 } from 'lucide-react';
 import StarField from './StarField';
 
 // Import real photos
@@ -29,26 +29,87 @@ const allPhotos = [
   { src: photoStreet, alt: 'Danish Jani - Street Style' },
 ];
 
-const features = [
-  { icon: Palette, title: 'Branding', description: 'Logo & Identity' },
-  { icon: Video, title: 'Editing', description: 'Video Production' },
-  { icon: Code2, title: 'Web Dev', description: 'Responsive Sites' },
-  { icon: Building, title: 'Agency', description: 'Management' },
+const expertise = [
+  { icon: Palette, title: 'Logo Design & Branding', tools: 'Adobe Illustrator, Photoshop, PixelLab' },
+  { icon: Video, title: 'Video Editing & Content', tools: 'Premiere Pro, Filmora (Ads, YouTube, TikTok)' },
+  { icon: Code2, title: 'Website Development', tools: 'HTML, CSS, JavaScript, React' },
+  { icon: Brain, title: 'AI Tools & Automation', tools: 'Workflow automation, growth tools' },
+  { icon: Cpu, title: '3D & Technical Design', tools: 'Autodesk Maya, AutoCAD' },
+  { icon: TrendingUp, title: 'Live Streaming Growth', tools: 'Agency systems, host management' },
 ];
 
-// E-E-A-T highlights with 2025 trending keywords
-const highlights = [
-  { icon: Award, text: '3+ years as Global Manager, Super Admin & Agency Owner - Verified Experience' },
-  { icon: Globe, text: 'Trusted by Chinese firms, HK, Malaysia, Singapore live apps - International Authority' },
-  { icon: TrendingUp, text: 'BD Official & Official Coins Seller - AI-Powered Growth Strategies' },
-  { icon: Users, text: '150+ projects, 50+ global clients - Proven Expertise in Creator Economy' },
+const whyWorkWithMe = [
+  { icon: Globe, text: 'Trusted by international agencies & live app teams' },
+  { icon: Lightbulb, text: 'Deep understanding of global digital business models' },
+  { icon: Zap, text: 'Fast delivery with professional communication' },
+  { icon: Heart, text: 'Long-term support mindset' },
+  { icon: Users, text: 'Real-world experience managing teams & platforms' },
 ];
 
-// Timeline with E-E-A-T experience signals
+const philosophy = [
+  { emoji: '🌱', text: 'Start small — every big journey begins with a step' },
+  { emoji: '⏳', text: 'Consistency beats motivation' },
+  { emoji: '💻', text: 'Technology creates unlimited opportunities' },
+  { emoji: '✨', text: 'Personal branding builds authority' },
+];
+
+// Enhanced Timeline with complete journey
 const timeline = [
-  { year: '2022', title: 'Started as Graphic Designer & Video Editor', desc: 'Began creative journey with logo, branding & content creation' },
-  { year: '2023', title: 'Expanded to Web Dev & AI Tools', desc: 'Added React web development, SEO optimization & AI automation' },
-  { year: '2024-25', title: 'Global Manager & Agency Owner', desc: 'Leading remote teams, managing international live streaming partnerships' },
+  { 
+    year: '2017', 
+    emoji: '📱',
+    title: 'Exploration Phase', 
+    desc: 'Started exploring social and messaging apps like IMO, Facebook Messenger, Instagram – discovering online communication and content creation.' 
+  },
+  { 
+    year: '2020', 
+    emoji: '🎤',
+    title: 'Live Streaming Entry', 
+    desc: 'Became a host on Likee app, gaining first experience in live streaming and audience engagement.' 
+  },
+  { 
+    year: '2020-2021', 
+    emoji: '🚀',
+    title: 'Short Video & Live Systems', 
+    desc: 'Joined as host on Snack Video, learning more about short videos and live systems.' 
+  },
+  { 
+    year: '2021-2022', 
+    emoji: '📊',
+    title: 'Algorithm & Growth Mastery', 
+    desc: 'TikTok launched in Pakistan – explored deeply, understood algorithms, content strategies, and live features.' 
+  },
+  { 
+    year: '2022', 
+    emoji: '🎨',
+    title: 'Creative & Production Expansion', 
+    desc: 'Started professional work as a Graphic Designer and Video Editor, delivering branding, logos, and content creation for digital platforms and live streaming creators.' 
+  },
+  { 
+    year: '2023', 
+    emoji: '🧠',
+    title: 'Web Development & AI Tools', 
+    desc: 'Expanded into web development and AI tools, adding React-based websites, SEO optimization, automation, and AI-powered workflows.' 
+  },
+  { 
+    year: '2022-2026', 
+    emoji: '💼',
+    title: 'Global Agency & Leadership', 
+    desc: 'Used all accumulated knowledge to start and scale my own live streaming agency. Served as Global Manager, Super Admin, BD Official, Official Coins Seller, and Hosting Provider. Recruited and managed hosts, built remote teams, and led international partnerships across Poppo Live, Bigo Live, Tango, and other platforms. Successfully delivered 150+ projects for 50+ global clients across China, Hong Kong, Malaysia, Singapore, and worldwide.' 
+  },
+];
+
+const expertiseTags = [
+  'Global Manager',
+  'Super Admin',
+  'Agency Owner',
+  'BD Official',
+  'Official Coins Seller',
+  'Live Streaming Operations',
+  'Branding & Editing',
+  'Web Development',
+  'AI Tools & Automation',
+  'Creator Economy Growth',
 ];
 
 const AboutSection = () => {
@@ -70,6 +131,7 @@ const AboutSection = () => {
       <div className="absolute inset-0 bg-gradient-dark" />
       <StarField count={40} />
       <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[180px] -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[150px]" />
 
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         {/* Section Header */}
@@ -81,20 +143,62 @@ const AboutSection = () => {
         >
           <motion.span 
             className="inline-flex items-center gap-2 text-primary font-medium mb-4 px-4 py-2 glass-card rounded-full"
-            animate={{ boxShadow: ['0 0 15px hsl(220 80% 55% / 0.2)', '0 0 25px hsl(220 80% 55% / 0.4)', '0 0 15px hsl(220 80% 55% / 0.2)'] }}
+            animate={{ boxShadow: ['0 0 15px hsl(var(--primary) / 0.2)', '0 0 25px hsl(var(--primary) / 0.4)', '0 0 15px hsl(var(--primary) / 0.2)'] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             ABOUT MR DANISH
           </motion.span>
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-            #1 <span className="text-gradient text-glow">Top-Rated</span> Live Streaming Expert 2025
+            Global <span className="text-gradient text-glow">Live Streaming Expert</span> & Digital Professional
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Trusted by leading Chinese management firms, live apps companies in Hong Kong, Malaysia, Singapore, and global tech, fintech & entertainment industries. AI-powered digital growth specialist.
-          </p>
         </motion.div>
 
-        {/* Photo Carousel with Glow */}
+        {/* Authority Opening Paragraph */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="max-w-5xl mx-auto mb-16"
+        >
+          <div className="glass p-8 md:p-10 rounded-3xl card-glow">
+            <div className="flex items-start gap-4 mb-6">
+              <motion.div 
+                className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center flex-shrink-0"
+                animate={{ boxShadow: ['0 0 20px hsl(var(--primary) / 0.3)', '0 0 30px hsl(var(--primary) / 0.5)', '0 0 20px hsl(var(--primary) / 0.3)'] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <Sparkles className="w-7 h-7 text-primary-foreground" />
+              </motion.div>
+              <div>
+                <h3 className="text-2xl md:text-3xl font-display font-bold mb-2">Hi, I'm Danish Jani 👋</h3>
+                <p className="text-muted-foreground">Pakistani Entrepreneur & Global Digital Professional</p>
+              </div>
+            </div>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              A Pakistani entrepreneur, global live streaming expert, and tech-focused digital professional with over <span className="text-primary font-semibold">3+ years of verified international experience</span> (actively continuing in 2026).
+            </p>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              I specialize in <span className="text-foreground font-medium">live streaming operations, agency management, AI-powered digital growth, branding, web development, and creator economy systems</span>. I have served globally as a <span className="text-primary font-semibold">Global Manager, Super Admin, BD Official (Business Development), Official Coins Seller, Agency Owner, and Hosting Provider</span> across multiple live streaming platforms.
+            </p>
+
+            <div className="p-5 rounded-2xl border border-primary/20 bg-primary/5 mb-6">
+              <h4 className="font-display font-bold text-foreground mb-3 flex items-center gap-2">
+                <Award className="w-5 h-5 text-primary" />
+                Professional Experience
+              </h4>
+              <p className="text-muted-foreground leading-relaxed">
+                I have successfully completed <span className="text-primary font-semibold">150+ professional projects</span> for <span className="text-primary font-semibold">50+ global clients</span>, collaborating with trusted Chinese management firms and live app companies based in <span className="text-foreground font-medium">China, Hong Kong, Malaysia, Singapore</span>, and other international markets.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-3">
+                My hands-on experience with <span className="text-foreground font-medium">TikTok, YouTube, and Instagram growth algorithms</span> (updated for 2025–2026) allows me to design scalable growth strategies that are monetization-safe and platform-compliant.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Photo Carousel */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -111,9 +215,9 @@ const AboutSection = () => {
               className="relative aspect-[16/9] rounded-3xl overflow-hidden"
               animate={{ 
                 boxShadow: [
-                  '0 0 30px hsl(220 80% 55% / 0.3), 0 20px 60px rgba(0,0,0,0.3)',
-                  '0 0 50px hsl(220 80% 55% / 0.5), 0 20px 60px rgba(0,0,0,0.3)',
-                  '0 0 30px hsl(220 80% 55% / 0.3), 0 20px 60px rgba(0,0,0,0.3)',
+                  '0 0 30px hsl(var(--primary) / 0.3), 0 20px 60px rgba(0,0,0,0.3)',
+                  '0 0 50px hsl(var(--primary) / 0.5), 0 20px 60px rgba(0,0,0,0.3)',
+                  '0 0 30px hsl(var(--primary) / 0.3), 0 20px 60px rgba(0,0,0,0.3)',
                 ]
               }}
               transition={{ duration: 3, repeat: Infinity }}
@@ -135,7 +239,7 @@ const AboutSection = () => {
               </div>
             </motion.div>
 
-            {/* Navigation Arrows with Glow */}
+            {/* Navigation Arrows */}
             <motion.button
               onClick={prevPhoto}
               whileHover={{ scale: 1.1 }}
@@ -176,150 +280,239 @@ const AboutSection = () => {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left Side - Story */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            <div className="glass p-8 rounded-3xl card-glow">
-              <div className="flex items-center gap-4 mb-6">
-                <motion.div 
-                  className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center"
-                  animate={{ boxShadow: ['0 0 20px hsl(220 80% 55% / 0.3)', '0 0 30px hsl(220 80% 55% / 0.5)', '0 0 20px hsl(220 80% 55% / 0.3)'] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  <Heart className="w-8 h-8 text-white" />
-                </motion.div>
-                <div>
-                  <h3 className="text-2xl font-display font-bold">My Journey</h3>
-                  <p className="text-muted-foreground">From Pakistan to Global</p>
+        {/* Expertise Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mb-16"
+        >
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-center mb-8">
+            My <span className="text-gradient">Expertise</span>
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {expertise.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.4 + index * 0.1 }}
+                whileHover={{ y: -5 }}
+                className="glass p-5 rounded-2xl card-glow"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-foreground mb-1">{item.title}</h4>
+                    <p className="text-sm text-muted-foreground">{item.tools}</p>
+                  </div>
                 </div>
-              </div>
-              
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                As the <span className="text-primary font-semibold">#1 top-rated global live streaming expert</span> with 3+ years verified experience, 
-                I've served as <span className="text-foreground font-medium">Global Manager, Super Admin, BD Official (Business Development), 
-                Official Coins Seller, Agency Owner, and Hosting Provider Worldwide</span>. Specializing in AI-powered digital growth strategies.
-              </p>
-              
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Completed <span className="text-primary font-semibold">150+ projects</span> for <span className="text-primary font-semibold">50+ global clients</span>, 
-                including trusted partnerships with <span className="text-foreground font-medium">Chinese management firms, live apps companies 
-                in Hong Kong, Malaysia, and Singapore</span>. Expert in TikTok, YouTube & Instagram growth algorithms for 2025.
-              </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Passionate about <span className="text-foreground font-medium">innovation, AI tools & automation</span>. 
-                Whether you need live streaming management, branding, development, or AI-powered digital marketing expertise, 
-                I'm your trusted remote work professional 🚀
-              </p>
-
-              {/* Highlights with Glow */}
-              <div className="space-y-3 mb-8">
-                {highlights.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                    whileHover={{ x: 5 }}
-                    className="flex items-center gap-3 text-sm p-2 rounded-lg hover:bg-primary/5 transition-all"
-                  >
-                    <motion.div 
-                      className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0"
-                      whileHover={{ boxShadow: '0 0 15px hsl(220 80% 55% / 0.4)' }}
-                    >
-                      <item.icon className="w-4 h-4 text-primary" />
-                    </motion.div>
-                    <span className="text-muted-foreground">{item.text}</span>
-                  </motion.div>
-                ))}
+        {/* Why Work With Me + Philosophy */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-20 max-w-5xl mx-auto">
+          {/* Why Work With Me */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="glass p-6 md:p-8 rounded-3xl card-glow"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
+                <CheckCircle2 className="w-6 h-6 text-primary-foreground" />
               </div>
-
-              {/* Feature Grid */}
-              <div className="grid grid-cols-4 gap-3">
-                {features.map((feature, index) => (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ delay: 0.6 + index * 0.1 }}
-                    whileHover={{ y: -5 }}
-                    className="text-center p-3 rounded-2xl bg-secondary/50 card-glow"
-                  >
-                    <feature.icon className="w-5 h-5 text-primary mx-auto mb-2" />
-                    <span className="text-xs font-medium block">{feature.title}</span>
-                  </motion.div>
-                ))}
-              </div>
+              <h3 className="text-xl font-display font-bold">Why Work With Me</h3>
+            </div>
+            <div className="space-y-3">
+              {whyWorkWithMe.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.5 + index * 0.1 }}
+                  className="flex items-center gap-3 p-2 rounded-lg hover:bg-primary/5 transition-all"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-muted-foreground text-sm">{item.text}</span>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
-          {/* Right Side - Timeline */}
+          {/* Philosophy */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="glass p-6 md:p-8 rounded-3xl card-glow"
           >
-            <div className="glass p-8 rounded-3xl card-glow">
-              <div className="flex items-center gap-4 mb-8">
-                <motion.div 
-                  className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center"
-                  animate={{ boxShadow: ['0 0 20px hsl(220 80% 55% / 0.3)', '0 0 30px hsl(220 80% 55% / 0.5)', '0 0 20px hsl(220 80% 55% / 0.3)'] }}
-                  transition={{ duration: 2, repeat: Infinity }}
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-xl flex items-center justify-center">
+                <Lightbulb className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <h3 className="text-xl font-display font-bold">Motivational Philosophy</h3>
+            </div>
+            <div className="space-y-3">
+              {philosophy.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.6 + index * 0.1 }}
+                  className="flex items-center gap-3 p-3 rounded-lg bg-secondary/30"
                 >
-                  <Target className="w-8 h-8 text-white" />
+                  <span className="text-xl">{item.emoji}</span>
+                  <span className="text-muted-foreground text-sm">{item.text}</span>
                 </motion.div>
-                <div>
-                  <h3 className="text-2xl font-display font-bold">My Timeline</h3>
-                  <p className="text-muted-foreground">Growth & Experience</p>
-                </div>
-              </div>
-
-              {/* Timeline */}
-              <div className="space-y-6">
-                {timeline.map((item, index) => (
-                  <motion.div
-                    key={item.year}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ delay: 0.7 + index * 0.15 }}
-                    className="relative pl-8 border-l-2 border-primary/30 pb-6 last:pb-0"
-                  >
-                    {/* Timeline Dot with Glow */}
-                    <motion.div 
-                      className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary"
-                      animate={{ boxShadow: ['0 0 10px hsl(220 80% 55% / 0.5)', '0 0 20px hsl(220 80% 55% / 0.8)', '0 0 10px hsl(220 80% 55% / 0.5)'] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
-                    />
-                    
-                    <span className="text-primary font-bold text-lg">{item.year}</span>
-                    <h4 className="font-display font-bold text-foreground mt-1">{item.title}</h4>
-                    <p className="text-muted-foreground text-sm mt-1">{item.desc}</p>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Additional Info */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 1.2 }}
-                className="mt-8 p-4 rounded-2xl border border-primary/30 bg-primary/5"
-              >
-                <div className="flex items-center gap-3">
-                  <Zap className="w-5 h-5 text-primary" />
-                  <span className="text-sm">
-                    <span className="text-foreground font-medium">Serving:</span>{' '}
-                    <span className="text-muted-foreground">China, Hong Kong, Malaysia, Singapore & Global Industries</span>
-                  </span>
-                </div>
-              </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
+
+        {/* Personal Brand Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="max-w-4xl mx-auto mb-20"
+        >
+          <div className="glass p-6 md:p-8 rounded-3xl card-glow text-center">
+            <div className="flex justify-center mb-4">
+              <div className="w-14 h-14 bg-gradient-to-br from-primary via-accent to-primary rounded-2xl flex items-center justify-center">
+                <Star className="w-7 h-7 text-primary-foreground" />
+              </div>
+            </div>
+            <h3 className="text-xl md:text-2xl font-display font-bold mb-4">Personal Brand & Vision</h3>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              <span className="text-primary font-semibold">Danish Jani</span>, also known as <span className="text-foreground font-medium">Mr Danish</span> and <span className="text-foreground font-medium">janigno1</span>, represents a modern global digital identity. Born and raised in <span className="text-foreground font-medium">Malakwal, Mandi Bahauddin, Pakistan</span>, I built my career from local roots to international reach through technology, discipline, and continuous learning.
+            </p>
+            <div className="p-4 rounded-2xl border border-accent/30 bg-accent/5 inline-block">
+              <p className="text-foreground font-medium italic">
+                "From Malakwal to global platforms, my journey proves that strong vision, modern skills, and persistence can build international impact."
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* MY JOURNEY / TIMELINE SECTION */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          id="journey"
+        >
+          <div className="text-center mb-12">
+            <motion.span 
+              className="inline-flex items-center gap-2 text-accent font-medium mb-4 px-4 py-2 glass-card rounded-full"
+              animate={{ boxShadow: ['0 0 15px hsl(var(--accent) / 0.2)', '0 0 25px hsl(var(--accent) / 0.4)', '0 0 15px hsl(var(--accent) / 0.2)'] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <Rocket className="w-4 h-4" />
+              MY JOURNEY
+            </motion.span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
+              Professional <span className="text-gradient text-glow">Timeline</span>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+              As a globally experienced live streaming professional with 3+ years of verified international experience (actively expanding through 2026), my journey reflects continuous growth across technology, creativity, leadership, and global digital systems.
+            </p>
+          </div>
+
+          {/* Timeline */}
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              {/* Vertical Line */}
+              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary" />
+              
+              {timeline.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.8 + index * 0.1 }}
+                  className={`relative flex items-start gap-6 mb-8 ${
+                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
+                >
+                  {/* Timeline Dot */}
+                  <motion.div 
+                    className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center z-10"
+                    animate={{ boxShadow: ['0 0 15px hsl(var(--primary) / 0.5)', '0 0 25px hsl(var(--primary) / 0.8)', '0 0 15px hsl(var(--primary) / 0.5)'] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
+                  >
+                    <span className="text-sm">{item.emoji}</span>
+                  </motion.div>
+                  
+                  {/* Content Card */}
+                  <div className={`ml-16 md:ml-0 md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
+                    <motion.div
+                      whileHover={{ y: -5 }}
+                      className="glass p-5 md:p-6 rounded-2xl card-glow"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-primary font-bold text-lg">{item.year}</span>
+                        <span className="text-xl">{item.emoji}</span>
+                      </div>
+                      <h4 className="font-display font-bold text-foreground text-lg mb-2">{item.title}</h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                    </motion.div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Expertise Tags */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 1.5 }}
+            className="mt-16 text-center"
+          >
+            <h4 className="text-lg font-display font-bold mb-6 text-muted-foreground">Areas of Expertise</h4>
+            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+              {expertiseTags.map((tag, index) => (
+                <motion.span
+                  key={tag}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 1.6 + index * 0.05 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="px-4 py-2 rounded-full glass-card text-sm font-medium text-foreground border border-primary/20 hover:border-primary/50 transition-all"
+                >
+                  {tag}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Ending Highlight */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 1.8 }}
+            className="mt-16 text-center"
+          >
+            <div className="inline-block p-6 md:p-8 rounded-3xl glass card-glow">
+              <motion.p 
+                className="text-2xl md:text-3xl font-display font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent"
+                animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
+                transition={{ duration: 5, repeat: Infinity }}
+                style={{ backgroundSize: '200% 200%' }}
+              >
+                "From explorer to agency owner — building the future of live streaming in Pakistan and worldwide. Insha'Allah top 1 soon! 🔥"
+              </motion.p>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
