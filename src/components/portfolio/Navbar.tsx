@@ -56,7 +56,7 @@ const Navbar = () => {
         >
           <motion.img
             src={logo}
-            alt="MR DANISH Logo"
+            alt="Danish Official Logo"
             className="w-12 h-12 rounded-xl object-cover"
             animate={{ 
               boxShadow: [
@@ -68,8 +68,8 @@ const Navbar = () => {
             transition={{ duration: 2, repeat: Infinity }}
           />
           <div className="hidden sm:block">
-            <span className="text-xl font-display font-bold text-gradient">MR DANISH</span>
-            <span className="block text-xs text-muted-foreground">Creative Professional</span>
+            <span className="text-xl font-display font-bold text-gradient">DANISH OFFICIAL</span>
+            <span className="block text-xs text-muted-foreground">Global Digital Builder</span>
           </div>
         </motion.a>
 

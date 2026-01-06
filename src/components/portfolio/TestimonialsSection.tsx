@@ -6,58 +6,64 @@ import StarField from './StarField';
 
 const testimonials = [
   {
-    quote: "Danish is the #1 professional I've worked with for live streaming management. His expertise in Poppo Live and agency setup is unmatched!",
+    quote: "Danish helped us scale from 50 to 300+ hosts in 6 months. His expertise in Poppo Live and agency setup delivered 400% growth in revenue!",
     author: "Chen Wei Lin",
     role: "CEO, HK Live Entertainment",
     country: "Hong Kong",
     flag: "🇭🇰",
     avatar: "CW",
     rating: 5,
+    result: "400% Revenue Growth",
   },
   {
-    quote: "Exceptional coins selling service with complete transparency. Trusted partner for our Singapore operations. Highly recommended!",
+    quote: "Exceptional coins selling service with complete transparency. Saved us 30% on costs while increasing transaction volume by 200%.",
     author: "Sarah Tan",
-    role: "Operations Director",
+    role: "Operations Director, LiveSG Media",
     country: "Singapore",
     flag: "🇸🇬",
     avatar: "ST",
     rating: 5,
+    result: "200% Volume Increase",
   },
   {
-    quote: "Best agency owner we've collaborated with. His global hosting services transformed our Malaysian business completely.",
+    quote: "Best agency owner we've collaborated with. His global hosting services transformed our Malaysian business — 150 new hosts onboarded in 3 months.",
     author: "Ahmad Razak",
-    role: "Live App Manager",
+    role: "Live App Manager, MY Streaming Co",
     country: "Malaysia",
     flag: "🇲🇾",
     avatar: "AR",
     rating: 5,
+    result: "150 Hosts Onboarded",
   },
   {
-    quote: "Top-rated freelancer! Danish's web development and design work exceeded all expectations. Will hire again!",
+    quote: "Danish's web development delivered a 70% increase in lead conversions. His design thinking and execution are world-class!",
     author: "Michael Zhang",
-    role: "Startup Founder",
+    role: "Startup Founder, TechHK",
     country: "Hong Kong",
     flag: "🇭🇰",
     avatar: "MZ",
     rating: 5,
+    result: "70% More Conversions",
   },
   {
-    quote: "Professional, reliable, and always delivers on time. His SEO work boosted our rankings significantly.",
+    quote: "Professional, reliable, and always delivers. His SEO work boosted our rankings from page 5 to page 1 in just 90 days.",
     author: "Priya Sharma",
-    role: "Digital Marketing Head",
+    role: "Digital Marketing Head, SGrowth",
     country: "Singapore",
     flag: "🇸🇬",
     avatar: "PS",
     rating: 5,
+    result: "Page 1 Rankings",
   },
   {
-    quote: "Danish's video editing skills are world-class. Perfect for our TikTok and Bigo Live content strategy.",
+    quote: "Danish's video editing generated 2M+ views on our TikTok content. Perfect for live streaming content strategy!",
     author: "Lee Ming",
-    role: "Content Manager",
+    role: "Content Manager, BuzzMY",
     country: "Malaysia",
     flag: "🇲🇾",
     avatar: "LM",
     rating: 5,
+    result: "2M+ Video Views",
   },
 ];
 
@@ -282,9 +288,16 @@ const TestimonialsSection = () => {
                     <div className="text-muted-foreground text-sm">
                       {testimonial.role}
                     </div>
-                    <div className="text-primary text-xs mt-1 flex items-center gap-1">
-                      <span>{testimonial.flag}</span>
-                      <span>{testimonial.country}</span>
+                    <div className="flex items-center justify-between mt-2">
+                      <div className="text-primary text-xs flex items-center gap-1">
+                        <span>{testimonial.flag}</span>
+                        <span>{testimonial.country}</span>
+                      </div>
+                      {'result' in testimonial && (
+                        <span className="text-xs font-semibold px-2 py-1 rounded-full bg-green-500/20 text-green-400">
+                          ✓ {(testimonial as any).result}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>

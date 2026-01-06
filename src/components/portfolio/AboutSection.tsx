@@ -146,10 +146,10 @@ const AboutSection = () => {
             animate={{ boxShadow: ['0 0 15px hsl(var(--primary) / 0.2)', '0 0 25px hsl(var(--primary) / 0.4)', '0 0 15px hsl(var(--primary) / 0.2)'] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            ABOUT MR DANISH
+            ABOUT DANISH OFFICIAL
           </motion.span>
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-            Global <span className="text-gradient text-glow">Live Streaming Expert</span> & Digital Professional
+            Strategic <span className="text-gradient text-glow">Creative Director</span> & Global Digital Builder
           </h2>
         </motion.div>
 
@@ -171,8 +171,34 @@ const AboutSection = () => {
               </motion.div>
               <div>
                 <h3 className="text-2xl md:text-3xl font-display font-bold mb-2">Hi, I'm Danish Jani 👋</h3>
-                <p className="text-muted-foreground">Pakistani Entrepreneur & Global Digital Professional</p>
+                <p className="text-muted-foreground">Strategic Creative Director & Global Digital Builder</p>
               </div>
+            </div>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              I help global brands, startups, and creators grow through design, AI tools, live streaming operations, and digital strategy. <span className="text-primary font-semibold">Trusted by international teams across China, Hong Kong, Malaysia, Singapore, and worldwide.</span>
+            </p>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              I combine creativity, technical expertise, and strategic insight to deliver branding, web development, video content, and AI-powered growth systems.
+            </p>
+            
+            <div className="flex flex-wrap gap-2 mb-6">
+              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">Core: Branding</span>
+              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">Video Editing</span>
+              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">Web Dev</span>
+              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">AI Tools</span>
+              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">Creator Economy</span>
+            </div>
+            
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 rounded-full bg-secondary/50 text-muted-foreground text-xs">Illustrator</span>
+              <span className="px-3 py-1 rounded-full bg-secondary/50 text-muted-foreground text-xs">Photoshop</span>
+              <span className="px-3 py-1 rounded-full bg-secondary/50 text-muted-foreground text-xs">Premiere Pro</span>
+              <span className="px-3 py-1 rounded-full bg-secondary/50 text-muted-foreground text-xs">Filmora</span>
+              <span className="px-3 py-1 rounded-full bg-secondary/50 text-muted-foreground text-xs">PixelLab</span>
+              <span className="px-3 py-1 rounded-full bg-secondary/50 text-muted-foreground text-xs">Maya</span>
+              <span className="px-3 py-1 rounded-full bg-secondary/50 text-muted-foreground text-xs">AutoCAD</span>
             </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">

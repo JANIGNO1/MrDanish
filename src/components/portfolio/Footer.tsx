@@ -27,6 +27,26 @@ const Footer = () => {
         >
           <Globe className="w-5 h-5 text-primary" />
           <span className="text-sm font-medium">
+            Trusted by clients and teams across <span className="text-primary">China • Hong Kong • Malaysia • Singapore</span> and worldwide
+          </span>
+        </motion.div>
+
+        {/* Brand Statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center mb-10"
+        >
+          <span className="text-xs text-muted-foreground uppercase tracking-wider">Danish Official — Global Digital Builder</span>
+        </motion.div>
+
+        {/* Removed duplicate trusted worldwide */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="hidden"
+        >
+          <span className="text-sm font-medium">
             Trusted Worldwide: <span className="text-muted-foreground">China • Hong Kong • Malaysia • Singapore & Top Industries</span>
           </span>
         </motion.div>
@@ -35,10 +55,10 @@ const Footer = () => {
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <a href="#home" className="text-2xl font-display font-bold text-gradient text-glow mb-2 block">
-              MR DANISH JANI
+              DANISH OFFICIAL
             </a>
             <p className="text-muted-foreground text-sm">
-              © 2025 Danish Jani. All rights reserved.
+              © 2026 Danish Official. All rights reserved.
             </p>
           </div>
 
