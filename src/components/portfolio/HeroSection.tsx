@@ -50,14 +50,14 @@ const FloatingParticles = () => {
   );
 };
 
-// Roles/titles with 2025 trending keywords - E-E-A-T optimized
+// Roles/titles with 2025-2026 trending keywords - E-E-A-T optimized
 const roles = [
-  '#1 Live Streaming Expert',
-  'AI-Powered Digital Growth',
-  'Global Agency Owner',
-  'Super Admin Worldwide',
-  'Remote Work Freelancer',
-  'Content Creator 2025',
+  'Strategic Creative Director',
+  'Global Digital Builder',
+  'AI-Powered Growth Expert',
+  'Live Streaming Authority',
+  'Agency Owner & Leader',
+  'Digital Experience Creator',
 ];
 
 // Social links with glow effect
@@ -237,7 +237,7 @@ const HeroSection = () => {
                   <Sparkles className="w-4 h-4 text-primary" aria-hidden="true" />
                 </motion.div>
                 <span className="text-sm font-medium text-foreground">
-                  🏆 #1 Worldwide Live Streaming Expert 2025 • Available 24/7
+                  🏆 Global Digital Builder 2026 • Available 24/7
                 </span>
               </motion.div>
 
@@ -248,7 +248,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-4 leading-tight"
               >
-                <span className="text-foreground text-glow-white">Danish Jani</span>
+                <span className="text-foreground text-glow-white">Danish Official</span>
               </motion.h1>
 
               {/* Rotating Roles with Glow */}
@@ -256,7 +256,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="mb-6"
+                className="mb-4"
               >
                 <div className="h-12 md:h-14 overflow-hidden">
                   <motion.div
@@ -272,7 +272,25 @@ const HeroSection = () => {
                 </div>
               </motion.div>
 
-              {/* Tagline - 2025 Trending Keywords */}
+              {/* Authority Headline */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-lg md:text-xl text-muted-foreground max-w-xl mb-4 leading-relaxed"
+              >
+                I help global brands grow through strategic design, high-impact video, and AI-powered digital experiences.
+              </motion.p>
+
+              {/* Trust Signal */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.45 }}
+                className="text-sm text-primary font-medium mb-6"
+              >
+                ✨ Trusted by international teams across China, Hong Kong, Malaysia, Singapore, and worldwide.
+              </motion.p>
 
               {/* CTA Buttons with Enhanced Glow */}
               <motion.div
@@ -287,13 +305,11 @@ const HeroSection = () => {
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   className="btn-primary px-8 py-4 text-white rounded-full font-semibold text-lg flex items-center gap-3 shine"
-                  aria-label="Hire Me Now - Go to contact section"
+                  aria-label="Book a Free Strategy Call"
                 >
-                  <span>Hire Me Now</span>
+                  <span>Book a Free Strategy Call</span>
                   <ArrowDown className="w-5 h-5" />
                 </motion.button>
-                
-                {/* Secondary CTA */}
               </motion.div>
 
               {/* Social Proof Badges */}

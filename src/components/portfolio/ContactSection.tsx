@@ -43,11 +43,18 @@ const socialLinks = [
     gradient: 'from-pink-500 to-orange-500'
   },
   { 
-    name: 'WhatsApp', 
+    name: 'WhatsApp Business', 
+    icon: MessageCircle,
+    href: 'https://wa.me/923107906630',
+    username: '+92 310 790 6630',
+    gradient: 'from-green-500 to-green-600'
+  },
+  { 
+    name: 'WhatsApp Backup', 
     icon: MessageCircle,
     href: 'https://wa.me/923400278535',
     username: '+92 340 027 8535',
-    gradient: 'from-green-500 to-green-600'
+    gradient: 'from-green-400 to-emerald-500'
   },
   { 
     name: 'Telegram', 
@@ -152,7 +159,7 @@ const ContactSection = () => {
             </span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Ready to work with a #1 Worldwide Expert? Tell me about your project 🚀
+            Reach out today to start your global growth journey 🚀
           </p>
         </motion.div>
 
@@ -167,7 +174,8 @@ const ContactSection = () => {
             {/* Quick Connect Cards */}
             {[
               { icon: Mail, title: 'Email Me', value: 'Danishasifjaved@gmail.com', href: 'mailto:Danishasifjaved@gmail.com' },
-              { icon: Phone, title: 'WhatsApp', value: '+92 340 027 8535', href: 'https://wa.me/923400278535' },
+              { icon: Phone, title: 'WhatsApp Business', value: '+92 310 790 6630', href: 'https://wa.me/923107906630' },
+              { icon: Phone, title: 'WhatsApp Backup', value: '+92 340 027 8535', href: 'https://wa.me/923400278535' },
               { icon: MapPin, title: 'Location', value: 'Malakwal, Punjab, Pakistan 🇵🇰', href: null },
             ].map((item, index) => (
               <motion.div
