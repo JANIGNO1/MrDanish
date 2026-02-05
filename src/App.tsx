@@ -23,6 +23,9 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Disclaimer from "./pages/Disclaimer";
 
+// Resume Page
+import Resume from "./pages/Resume";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -50,6 +53,9 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          
+          {/* Resume Page */}
+          <Route path="/resume" element={<Resume />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
