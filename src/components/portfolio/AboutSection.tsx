@@ -38,6 +38,19 @@ const expertise = [
   { icon: TrendingUp, title: 'Live Streaming Growth', tools: 'Agency systems, host management' },
 ];
 
+// Skill Progress Bars Data
+const skillProgressData = [
+  { name: 'Adobe Illustrator', level: 95, color: 'from-orange-500 to-yellow-500' },
+  { name: 'Adobe Photoshop', level: 90, color: 'from-blue-500 to-cyan-400' },
+  { name: 'Premiere Pro', level: 92, color: 'from-purple-500 to-pink-500' },
+  { name: 'Filmora', level: 90, color: 'from-green-500 to-emerald-400' },
+  { name: 'PixelLab', level: 85, color: 'from-rose-500 to-red-400' },
+  { name: 'React.js', level: 85, color: 'from-cyan-400 to-blue-500' },
+  { name: 'HTML / CSS / JavaScript', level: 90, color: 'from-amber-500 to-orange-500' },
+  { name: 'SEO Optimization', level: 88, color: 'from-green-400 to-teal-500' },
+  { name: 'AI Tools & Automation', level: 90, color: 'from-violet-500 to-purple-500' },
+];
+
 const whyWorkWithMe = [
   { icon: Globe, text: 'Trusted by international agencies & live app teams' },
   { icon: Lightbulb, text: 'Deep understanding of global digital business models' },
@@ -337,6 +350,72 @@ const AboutSection = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Animated Skill Progress Bars */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="mb-16 max-w-4xl mx-auto"
+        >
+          <h3 className="text-2xl md:text-3xl font-display font-bold text-center mb-8">
+            Technical <span className="text-gradient">Proficiency</span>
+          </h3>
+          <div className="glass p-6 md:p-8 rounded-3xl card-glow">
+            <div className="space-y-5">
+              {skillProgressData.map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.4 + index * 0.08 }}
+                  className="group"
+                >
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="font-medium text-foreground text-sm md:text-base group-hover:text-primary transition-colors">
+                      {skill.name}
+                    </span>
+                    <span className="text-sm font-bold text-primary">{skill.level}%</span>
+                  </div>
+                  <div className="h-3 bg-secondary/50 rounded-full overflow-hidden shadow-inner">
+                    <motion.div
+                      className={`h-full rounded-full bg-gradient-to-r ${skill.color} relative`}
+                      initial={{ width: 0 }}
+                      animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
+                      transition={{ 
+                        duration: 1.2, 
+                        delay: 0.5 + index * 0.1, 
+                        ease: [0.25, 0.46, 0.45, 0.94] 
+                      }}
+                      style={{
+                        boxShadow: '0 0 10px currentColor, 0 0 20px currentColor'
+                      }}
+                    >
+                      <motion.div
+                        className="absolute inset-0 bg-white/20"
+                        animate={{ 
+                          x: ['-100%', '200%']
+                        }}
+                        transition={{
+                          duration: 2,
+                          delay: 1.5 + index * 0.1,
+                          repeat: Infinity,
+                          repeatDelay: 3
+                        }}
+                        style={{
+                          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)'
+                        }}
+                      />
+                    </motion.div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <p className="text-center text-muted-foreground text-sm mt-6">
+              Continuously learning and upgrading skills for 2025–2026 industry standards
+            </p>
           </div>
         </motion.div>
 
