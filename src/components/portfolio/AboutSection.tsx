@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Code2, Palette, Video, Zap, Heart, Target, Award, Users, Globe, Building, ChevronLeft, ChevronRight, Briefcase, TrendingUp, Sparkles, Rocket, Brain, Cpu, MessageSquare, Lightbulb, Star, CheckCircle2 } from 'lucide-react';
+import { Code2, Palette, Video, Zap, Heart, Target, Award, Users, Globe, Building, ChevronLeft, ChevronRight, Briefcase, TrendingUp, Sparkles, Rocket, Brain, Cpu, MessageSquare, Lightbulb, Star, CheckCircle2, FileDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import StarField from './StarField';
 
 // Import real photos
@@ -416,6 +417,41 @@ const AboutSection = () => {
             <p className="text-center text-muted-foreground text-sm mt-6">
               Continuously learning and upgrading skills for 2025–2026 industry standards
             </p>
+
+            {/* Download Resume Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="flex justify-center mt-8"
+            >
+              <Link
+                to="/resume"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex flex-col items-center"
+              >
+                <motion.div
+                  className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-2xl font-semibold shadow-lg transition-all duration-300 group-hover:shadow-xl"
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  animate={{
+                    boxShadow: [
+                      '0 10px 30px -10px hsl(var(--primary) / 0.4)',
+                      '0 10px 40px -10px hsl(var(--primary) / 0.6)',
+                      '0 10px 30px -10px hsl(var(--primary) / 0.4)',
+                    ]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <FileDown className="w-5 h-5" />
+                  <span>Download Professional Resume (PDF)</span>
+                </motion.div>
+                <span className="mt-2 text-xs text-muted-foreground">
+                  Updated • Global Experience • Agency Leadership
+                </span>
+              </Link>
+            </motion.div>
           </div>
         </motion.div>
 
