@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Sparkles, Play, Star, Award, Users, Globe, Briefcase, Linkedin, Twitter, Instagram, Crown, Zap } from 'lucide-react';
+import { ArrowDown, Sparkles, Play, Star, Award, Users, Globe, Briefcase, Linkedin, Twitter, Instagram, Crown, Zap, CheckCircle2 } from 'lucide-react';
 import { useEffect, useState, useCallback } from 'react';
 import profileMain from '@/assets/profile-main.jpg';
 import StarField from './StarField';
@@ -287,10 +287,25 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.45 }}
-                className="text-sm text-primary font-medium mb-6"
+                className="text-sm text-primary font-medium mb-4"
               >
                 ✨ Trusted by international teams across China, Hong Kong, Malaysia, Singapore, and worldwide.
               </motion.p>
+
+              {/* PSEB Trust Line */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.48 }}
+                className="flex items-center justify-center lg:justify-start gap-2 mb-6"
+              >
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
+                  <span className="text-xs text-muted-foreground font-medium">
+                    PSEB-Registered IT & Digital Services Provider (Pakistan)
+                  </span>
+                </div>
+              </motion.div>
 
               {/* CTA Buttons with Enhanced Glow */}
               <motion.div
