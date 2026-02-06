@@ -137,41 +137,49 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass-strong mt-4 mx-4 rounded-2xl overflow-hidden border border-border/30"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="lg:hidden absolute top-full left-0 right-0 mt-2 mx-4"
           >
-            <div className="p-6 flex flex-col gap-2">
-              {navLinks.map((link) => (
+            <div className="glass-strong rounded-2xl border border-border/30 shadow-2xl overflow-hidden">
+              <div className="p-4 flex flex-col gap-1">
+                {navLinks.map((link, index) => (
+                  <motion.a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    className={`py-3 px-4 rounded-xl transition-all font-medium ${
+                      activeSection === link.href.replace('#', '')
+                        ? 'bg-primary/20 text-primary'
+                        : 'text-foreground hover:bg-secondary/50'
+                    }`}
+                  >
+                    {link.name}
+                  </motion.a>
+                ))}
                 <motion.a
-                  key={link.name}
-                  href={link.href}
+                  href="#contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  whileHover={{ x: 5 }}
-                  className={`py-3 px-4 rounded-xl transition-all ${
-                    activeSection === link.href.replace('#', '')
-                      ? 'bg-primary/20 text-primary'
-                      : 'text-foreground hover:bg-secondary/50'
-                  }`}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: navLinks.length * 0.05 }}
+                  className="mt-3 px-6 py-4 bg-gradient-primary text-primary-foreground rounded-xl font-semibold text-center flex items-center justify-center gap-2"
+                  style={{
+                    boxShadow: '0 0 20px hsl(262 83% 58% / 0.4)'
+                  }}
                 >
-                  {link.name}
+                  <Sparkles className="w-5 h-5" />
+                  Hire Me
                 </motion.a>
-              ))}
-              <motion.a
-                href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-4 px-6 py-4 bg-gradient-primary text-primary-foreground rounded-xl font-semibold text-center flex items-center justify-center gap-2"
-                style={{
-                  boxShadow: '0 0 20px hsl(262 83% 58% / 0.4)'
-                }}
-              >
-                <Sparkles className="w-5 h-5" />
-                Hire Me
-              </motion.a>
+              </div>
             </div>
           </motion.div>
         )}

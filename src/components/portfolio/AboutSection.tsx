@@ -237,23 +237,34 @@ const AboutSection = () => {
             </div>
 
             {/* PSEB Credential Highlight */}
-            <div className="flex items-center gap-3 p-4 rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
-                <CheckCircle2 className="w-5 h-5 text-primary" />
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 p-5 rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/5 via-background to-accent/5">
+              <div className="flex items-center gap-3 flex-1">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <CheckCircle2 className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <div>
+                  <p className="text-sm sm:text-base text-foreground font-semibold">
+                    PSEB-Registered IT & Digital Services Provider
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    Pakistan Software Export Board — Official Verification
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="text-sm text-foreground font-medium">
-                  Officially registered with the Pakistan Software Export Board (PSEB) as an IT & Digital Services Provider.
-                </p>
-                <a 
-                  href="/pseb-registration-danish-official.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-xs text-primary hover:underline inline-flex items-center gap-1 mt-1"
-                >
-                  View Certificate →
-                </a>
-              </div>
+              <motion.a 
+                href="/pseb-registration-danish-official.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transition-all whitespace-nowrap"
+                style={{
+                  boxShadow: '0 4px 20px hsl(var(--primary) / 0.3)'
+                }}
+              >
+                <FileDown className="w-4 h-4" />
+                View Certificate
+              </motion.a>
             </div>
           </div>
         </motion.div>
