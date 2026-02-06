@@ -125,6 +125,13 @@ const Footer = () => {
           <a href="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors text-xs">Terms of Service</a>
           <a href="/disclaimer" className="text-muted-foreground hover:text-primary transition-colors text-xs">Disclaimer</a>
         </div>
+
+        {/* PSEB Credential */}
+        <div className="flex justify-center mt-6 pt-4 border-t border-border/10">
+          <span className="text-xs text-muted-foreground/70">
+            PSEB-Registered IT & Digital Services Provider
+          </span>
+        </div>
       </div>
     </footer>
   );

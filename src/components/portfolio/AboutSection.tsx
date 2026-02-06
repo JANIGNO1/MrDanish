@@ -235,6 +235,26 @@ const AboutSection = () => {
                 My hands-on experience with <span className="text-foreground font-medium">TikTok, YouTube, and Instagram growth algorithms</span> (updated for 2025–2026) allows me to design scalable growth strategies that are monetization-safe and platform-compliant.
               </p>
             </div>
+
+            {/* PSEB Credential Highlight */}
+            <div className="flex items-center gap-3 p-4 rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
+                <CheckCircle2 className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-sm text-foreground font-medium">
+                  Officially registered with the Pakistan Software Export Board (PSEB) as an IT & Digital Services Provider.
+                </p>
+                <a 
+                  href="/pseb-registration-danish-official.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-xs text-primary hover:underline inline-flex items-center gap-1 mt-1"
+                >
+                  View Certificate →
+                </a>
+              </div>
+            </div>
           </div>
         </motion.div>
 
