@@ -248,7 +248,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-4 leading-tight"
               >
-                <span className="text-foreground text-glow-white">Danish Official</span>
+                <span className="text-foreground text-glow-white">Mr Danish Jani</span>
               </motion.h1>
 
               {/* Rotating Roles with Glow */}
@@ -279,7 +279,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-lg md:text-xl text-muted-foreground max-w-xl mb-4 leading-relaxed"
               >
-                I help global brands grow through strategic design, high-impact video, and AI-powered digital experiences.
+                I help global brands grow through strategic design, AI-powered digital systems, and live streaming expertise.
               </motion.p>
 
               {/* Trust Signal */}
