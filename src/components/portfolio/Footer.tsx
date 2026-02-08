@@ -37,7 +37,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-10"
         >
-          <span className="text-xs text-muted-foreground uppercase tracking-wider">Danish Official — Global Digital Builder</span>
+          <span className="text-xs text-muted-foreground uppercase tracking-wider">Mr Danish Jani — Strategic Creative Director & Global Digital Builder</span>
         </motion.div>
 
         {/* Removed duplicate trusted worldwide */}
@@ -55,10 +55,10 @@ const Footer = () => {
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <a href="#home" className="text-2xl font-display font-bold text-gradient text-glow mb-2 block">
-              DANISH OFFICIAL
+              MR DANISH JANI
             </a>
             <p className="text-muted-foreground text-sm">
-              © 2026 Danish Official. All rights reserved.
+              © 2026 Mr Danish Jani. All rights reserved.
             </p>
           </div>
 

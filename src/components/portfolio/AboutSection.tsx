@@ -160,10 +160,10 @@ const AboutSection = () => {
             animate={{ boxShadow: ['0 0 15px hsl(var(--primary) / 0.2)', '0 0 25px hsl(var(--primary) / 0.4)', '0 0 15px hsl(var(--primary) / 0.2)'] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            ABOUT DANISH OFFICIAL
+            ABOUT MR DANISH JANI
           </motion.span>
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-            Strategic <span className="text-gradient text-glow">Creative Director</span> & Global Digital Builder
+            <span className="text-gradient text-glow">Mr Danish Jani</span> — Strategic Creative Director
           </h2>
         </motion.div>
 
@@ -184,9 +184,20 @@ const AboutSection = () => {
                 <Sparkles className="w-7 h-7 text-primary-foreground" />
               </motion.div>
               <div>
-                <h3 className="text-2xl md:text-3xl font-display font-bold mb-2">Hi, I'm Danish Jani 👋</h3>
+                <h3 className="text-2xl md:text-3xl font-display font-bold mb-2">Hi, I'm Mr Danish Jani 👋</h3>
                 <p className="text-muted-foreground">Strategic Creative Director & Global Digital Builder</p>
               </div>
+            </div>
+            
+            {/* Download Resume Button */}
+            <div className="mb-6">
+              <Link 
+                to="/resume"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-secondary/50 hover:bg-secondary rounded-xl text-foreground font-medium transition-all hover:shadow-lg border border-border/50 hover:border-primary/30"
+              >
+                <FileDown className="w-5 h-5 text-primary" />
+                Download Professional Resume (PDF)
+              </Link>
             </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
