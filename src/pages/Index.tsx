@@ -13,6 +13,7 @@ import ContactSection from '@/components/portfolio/ContactSection';
 import Footer from '@/components/portfolio/Footer';
 import RankingCTA from '@/components/portfolio/RankingCTA';
 import LiveAppsSection from '@/components/portfolio/LiveAppsSection';
+import WhatsAppFloat from '@/components/portfolio/WhatsAppFloat';
 const Index = () => {
   useEffect(() => {
     // Initialize dark mode
@@ -37,6 +38,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };
