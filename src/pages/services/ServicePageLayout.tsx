@@ -75,8 +75,9 @@ const ServicePageLayout = ({
       "description": description,
       "provider": {
         "@type": "Person",
-        "name": "Danish Jani",
-        "url": "https://mrdanish.netlify.app"
+        "@id": "https://mrdanish.netlify.app/#person",
+        "name": "Mr Danish Jani",
+        "url": "https://mrdanish.netlify.app/"
       },
       "areaServed": "Worldwide",
       "serviceType": title
@@ -103,7 +104,14 @@ const ServicePageLayout = ({
     serviceScriptTag.textContent = JSON.stringify(serviceSchema);
 
     // Update meta tags
-    document.title = metaTitle || `${title} - Danish Jani | #1 Global Expert`;
+    document.title = metaTitle || `${title} - Mr Danish Jani | PSEB-Registered Provider`;
+
+    // Update canonical URL for this service page
+    const slug = window.location.pathname;
+    let canonicalTag = document.querySelector('link[rel="canonical"]');
+    if (canonicalTag) {
+      canonicalTag.setAttribute('href', `https://mrdanish.netlify.app${slug}`);
+    }
     
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
@@ -116,6 +124,11 @@ const ServicePageLayout = ({
       const serviceScript = document.querySelector('script[data-schema="service"]');
       if (faqScript) faqScript.remove();
       if (serviceScript) serviceScript.remove();
+      // Restore homepage canonical
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        canonical.setAttribute('href', 'https://mrdanish.netlify.app/');
+      }
     };
   }, [title, description, faqs, metaTitle, metaDescription]);
 
