@@ -77,10 +77,16 @@ const ServicePageLayout = ({
         "@type": "Person",
         "@id": "https://mrdanish.netlify.app/#person",
         "name": "Mr Danish Jani",
+        "alternateName": ["Danish Jani", "DJ Agency", "Mr Danish"],
         "url": "https://mrdanish.netlify.app/"
       },
       "areaServed": "Worldwide",
-      "serviceType": title
+      "serviceType": title,
+      "brand": {
+        "@type": "Organization",
+        "@id": "https://mrdanish.netlify.app/#organization",
+        "name": "DJ Agency"
+      }
     };
 
     // Create or update FAQ schema script

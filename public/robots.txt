@@ -1,6 +1,7 @@
 # robots.txt for https://mrdanish.netlify.app/
 # Mr Danish Jani — PSEB-Registered IT & Digital Services Provider
-# Last Updated: 2026-02-09
+# DJ Agency Official Website
+# Last Updated: 2026-03-05
 
 # Google Crawlers
 User-agent: Googlebot
@@ -24,7 +25,6 @@ Allow: /
 # Bing & Microsoft
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 User-agent: msnbot
 Allow: /
@@ -69,6 +69,11 @@ Allow: /
 User-agent: *
 Allow: /
 Crawl-delay: 2
+
+# Disallow non-content paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
 
 # Sitemap
 Sitemap: https://mrdanish.netlify.app/sitemap.xml
