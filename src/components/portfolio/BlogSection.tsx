@@ -34,6 +34,7 @@ const blogPosts: BlogPost[] = [
     readTime: '7 min read',
     date: 'Dec 10, 2025',
     image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop',
+    slug: '/blog/seo-boost-freelance-business',
   },
   {
     id: 3,
