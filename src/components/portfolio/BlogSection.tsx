@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ArrowRight, Calendar, Clock, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface BlogPost {
   id: number;
