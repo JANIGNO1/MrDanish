@@ -26,6 +26,12 @@ import Disclaimer from "./pages/Disclaimer";
 // Resume Page
 import Resume from "./pages/Resume";
 
+// Blog Pages
+import DesignTrends2026 from "./pages/blog/DesignTrends2026";
+import SEOFreelanceBusiness from "./pages/blog/SEOFreelanceBusiness";
+import PersonalBrandFreelancer from "./pages/blog/PersonalBrandFreelancer";
+import VideoEditingTips from "./pages/blog/VideoEditingTips";
+
 const queryClient = new QueryClient();
 
 const App = () => (
