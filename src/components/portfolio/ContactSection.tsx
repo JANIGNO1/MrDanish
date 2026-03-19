@@ -411,7 +411,7 @@ const ContactSection = () => {
                 </motion.button>
 
                 <p className="text-center text-muted-foreground text-sm">
-                  Or directly email: <a href="mailto:Danishasifjaved@gmail.com" className="text-primary hover:underline">Danishasifjaved@gmail.com</a>
+                  Or directly email: <a href="mailto:danishdjofficial@gmail.com" className="text-primary hover:underline">danishdjofficial@gmail.com</a>
                 </p>
               </form>
             </div>

@@ -66,7 +66,7 @@ const Resume = () => {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-blue-600" />
-              <span>danishasifjaved@gmail.com</span>
+              <span>danishdjofficial@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
               <Globe className="w-4 h-4 text-blue-600" />
