@@ -24,6 +24,7 @@ const blogPosts: BlogPost[] = [
     readTime: '5 min read',
     date: 'Dec 15, 2025',
     image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop',
+    slug: '/blog/top-design-trends-2026',
   },
   {
     id: 2,
