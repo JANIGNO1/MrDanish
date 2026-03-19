@@ -107,14 +107,14 @@ const BlogCard = ({ post, index, isInView }: { post: BlogPost; index: number; is
         </p>
         
         {/* Read More Link */}
-        <a 
-          href="#" 
+        <Link 
+          to={post.slug} 
           className="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all"
           aria-label={`Read more about ${post.title}`}
         >
           Read More
           <ArrowRight className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
     </motion.article>
   );

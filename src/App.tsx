@@ -60,6 +60,12 @@ const App = () => (
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           
+          {/* Blog Pages */}
+          <Route path="/blog/top-design-trends-2026" element={<DesignTrends2026 />} />
+          <Route path="/blog/seo-boost-freelance-business" element={<SEOFreelanceBusiness />} />
+          <Route path="/blog/personal-brand-freelancer" element={<PersonalBrandFreelancer />} />
+          <Route path="/blog/video-editing-social-media" element={<VideoEditingTips />} />
+          
           {/* Resume Page */}
           <Route path="/resume" element={<Resume />} />
           
