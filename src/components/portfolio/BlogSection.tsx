@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ArrowRight, Calendar, Clock, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface BlogPost {
   id: number;
@@ -11,6 +12,7 @@ interface BlogPost {
   readTime: string;
   date: string;
   image: string;
+  slug: string;
 }
 
 const blogPosts: BlogPost[] = [
@@ -22,6 +24,7 @@ const blogPosts: BlogPost[] = [
     readTime: '5 min read',
     date: 'Dec 15, 2025',
     image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop',
+    slug: '/blog/top-design-trends-2026',
   },
   {
     id: 2,
@@ -31,6 +34,7 @@ const blogPosts: BlogPost[] = [
     readTime: '7 min read',
     date: 'Dec 10, 2025',
     image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop',
+    slug: '/blog/seo-boost-freelance-business',
   },
   {
     id: 3,
@@ -40,6 +44,7 @@ const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     date: 'Dec 5, 2025',
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop',
+    slug: '/blog/personal-brand-freelancer',
   },
   {
     id: 4,
@@ -49,6 +54,7 @@ const blogPosts: BlogPost[] = [
     readTime: '8 min read',
     date: 'Nov 28, 2025',
     image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop',
+    slug: '/blog/video-editing-social-media',
   },
 ];
 
@@ -101,14 +107,14 @@ const BlogCard = ({ post, index, isInView }: { post: BlogPost; index: number; is
         </p>
         
         {/* Read More Link */}
-        <a 
-          href="#" 
+        <Link 
+          to={post.slug} 
           className="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all"
           aria-label={`Read more about ${post.title}`}
         >
           Read More
           <ArrowRight className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
     </motion.article>
   );
