@@ -173,7 +173,7 @@ const ContactSection = () => {
           >
             {/* Quick Connect Cards */}
             {[
-              { icon: Mail, title: 'Email Me', value: 'Danishasifjaved@gmail.com', href: 'mailto:Danishasifjaved@gmail.com' },
+              { icon: Mail, title: 'Email Me', value: 'danishdjofficial@gmail.com', href: 'mailto:danishdjofficial@gmail.com' },
               { icon: Phone, title: 'WhatsApp Business', value: '+92 310 790 6630', href: 'https://wa.me/923107906630' },
               { icon: Phone, title: 'WhatsApp Backup', value: '+92 340 027 8535', href: 'https://wa.me/923400278535' },
               { icon: MapPin, title: 'Location', value: 'Malakwal, Punjab, Pakistan 🇵🇰', href: null },
