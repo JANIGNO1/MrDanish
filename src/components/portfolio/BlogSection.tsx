@@ -44,6 +44,7 @@ const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     date: 'Dec 5, 2025',
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop',
+    slug: '/blog/personal-brand-freelancer',
   },
   {
     id: 4,
