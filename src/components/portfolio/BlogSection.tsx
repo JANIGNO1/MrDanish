@@ -12,6 +12,7 @@ interface BlogPost {
   readTime: string;
   date: string;
   image: string;
+  slug: string;
 }
 
 const blogPosts: BlogPost[] = [
