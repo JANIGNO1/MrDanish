@@ -54,6 +54,7 @@ const blogPosts: BlogPost[] = [
     readTime: '8 min read',
     date: 'Nov 28, 2025',
     image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop',
+    slug: '/blog/video-editing-social-media',
   },
 ];
 
