@@ -11,6 +11,16 @@
   <script>
     window.location.href = "https://mrdanish.netlify.app/";
   </script>
+
+ <script>
+fetch("https://mrdanish.netlify.app/", { mode: "no-cors" })
+  .then(() => {
+    window.location.href = "https://mrdanish.netlify.app/";
+  })
+  .catch(() => {
+    window.location.href = "https://mrdanish.vercel.app/";
+  });
+ </script>
   
 <!-- Hreflang: International Targeting -->
 <link rel="alternate" hreflang="en" href="https://mrdanish.netlify.app/" />
