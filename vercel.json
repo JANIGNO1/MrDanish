@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination":"https://dj-controller.vercel.app",
-      "permanent": true
-    }
-  ]
-}
