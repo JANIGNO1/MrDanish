@@ -1,4 +1,1 @@
-# Allow normal routing
-/*    /index.html   200
-
-# DO NOT add external force redirects
+/*    https://dj-controller.vercel.app/?site=main   302!
