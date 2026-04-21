@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
-Sitemap: https://mrdanish.netlify.app/sitemap.xml
+Sitemap: https://dj-controller.vercel.app/sitemap.xml
